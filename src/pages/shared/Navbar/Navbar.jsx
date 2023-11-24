@@ -1,4 +1,4 @@
-import { IoRestaurantSharp } from "react-icons/io5";
+import { HiMenuAlt1 } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 
@@ -29,11 +29,11 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-[#0f9af7] w-full px-4 md:px-8 lg:px-20 py-2 lg:py-6 rounded-bl-[60px]">
+    <nav className="bg-[#13a0fe] w-full px-8 lg:px-20 py-4 lg:py-6 rounded-bl-[45px] md:rounded-bl-[60px]">
       <div className="flex justify-between items-center">
         <div className="dropdown lg:hidden">
           <label tabIndex={0} className="text-3xl font-extrabold text-white">
-            <IoRestaurantSharp />
+            <HiMenuAlt1 />
           </label>
           <ul
             tabIndex={0}
