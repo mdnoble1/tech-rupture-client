@@ -9,7 +9,7 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? `text-[#faa504]` : `text-white`
+            isActive ? `text-black` : `text-white`
           }
         >
           HOME
@@ -19,7 +19,7 @@ const Navbar = () => {
         <NavLink
           to="/products"
           className={({ isActive }) =>
-            isActive ? `text-[#faa504]` : `text-white`
+            isActive ? `text-black` : `text-white`
           }
         >
           PRODUCTS
@@ -29,7 +29,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-[#13a0fe] w-full px-8 lg:px-20 py-4 lg:py-6 rounded-bl-[45px] md:rounded-bl-[60px]">
+    <nav className="bg-[#13a0fe] w-full px-8 lg:px-24 py-4 lg:py-6 rounded-bl-[45px] md:rounded-bl-[60px]">
       <div className="flex justify-between items-center">
         <div className="dropdown lg:hidden">
           <label tabIndex={0} className="text-3xl font-extrabold text-white">
