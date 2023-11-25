@@ -25,6 +25,26 @@ const Navbar = () => {
           PRODUCTS
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/login"
+          className={({ isActive }) =>
+            isActive ? `text-black` : `text-white`
+          }
+        >
+          LOGIN
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/register"
+          className={({ isActive }) =>
+            isActive ? `text-black` : `text-white`
+          }
+        >
+          REGISTER
+        </NavLink>
+      </li>
     </>
   );
 
