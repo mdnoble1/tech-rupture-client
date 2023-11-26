@@ -26,7 +26,7 @@ const Register = () => {
 
       updateUserProfile(data.name, data.photoURL)
         .then(() => {
-          console.log("user profile info updated");
+          // console.log("user profile info updated");
           // create user entry in the database
           const userInfo = {
             name: data.name,
@@ -91,7 +91,7 @@ const Register = () => {
               />
             </div>
             {errors.photoURL && (
-              <span className="text-red-600">Photo is required</span>
+              <span className="text-red-600">Email is required</span>
             )}
             <div className="form-control">
               <label className="label">
