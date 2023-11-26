@@ -1,11 +1,86 @@
-import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  // const { createUser, updateUserProfile } = useContext(AuthContext);
+  // const navigate = useNavigate();
+
+  const onSubmit = (data) => {
+    //console.log(data);
+
+    // createUser(data.email, data.password).then((result) => {
+    //   const loggedUser = result.user;
+    //   console.log(loggedUser);
+    //   updateUserProfile(data.name, data.photoURL)
+    //     .then(() => {
+    //       //console.log('user profile info updated')
+    //       // create user entry in the database
+    //       const userInfo = {
+    //         name: data.name,
+    //         email: data.email,
+    //       };
+
+          // axiosPublic.post('/users', userInfo)
+          //     .then(res => {
+          //         if (res.data.insertedId) {
+          //             console.log('user added to the database')
+          //             reset();
+          //             Swal.fire({
+          //                 position: 'top-end',
+          //                 icon: 'success',
+          //                 title: 'User created successfully.',
+          //                 showConfirmButton: false,
+          //                 timer: 1500
+          //             });
+          //             navigate('/');
+          //         }
+          //     })
+    //     })
+    //     .catch((error) => console.log(error));
+    // });
+  };
+
   return (
     <section className="container mx-auto lg:mt-10">
       <div className="lg:flex items-center justify-center lg:gap-32">
         <div className="w-11/12 lg:w-full bg-slate-100 rounded-lg drop-shadow-2xl mx-auto">
-          <form className="card-body lg:px-32 pt-12 lg:pt-32 pb-12">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="card-body lg:px-32 pt-12 lg:pt-32 pb-12"
+          >
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text font-semibold text-xl text-[#444]">
+                  Name
+                </span>
+              </label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Type Your Name"
+                className="input rounded focus:border-[#13a0fe]"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text font-semibold text-xl text-[#444]">
+                  Photo URL
+                </span>
+              </label>
+              <input
+                type="text"
+                placeholder="Your Photo URL"
+                className="input rounded focus:border-[#13a0fe]"
+                required
+              />
+            </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-semibold text-xl text-[#444]">
@@ -14,12 +89,16 @@ const Register = () => {
               </label>
               <input
                 type="email"
+                {...register("email", { required: true })}
                 name="email"
                 placeholder="Type Your Email"
                 className="input rounded focus:border-[#13a0fe]"
                 required
               />
             </div>
+            {errors.email && (
+              <span className="text-red-600">Email is required</span>
+            )}
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-semibold text-xl text-[#444]">
@@ -28,13 +107,35 @@ const Register = () => {
               </label>
               <input
                 type="password"
+                {...register("password", {
+                  required: true,
+                  minLength: 6,
+                  maxLength: 20,
+                  pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
+                })}
                 name="password"
                 placeholder="Type Your Password"
                 className="input rounded focus:border-[#13a0fe]"
                 required
               />
             </div>
-
+            {errors.password?.type === "required" && (
+              <p className="text-red-600">Password is required</p>
+            )}
+            {errors.password?.type === "minLength" && (
+              <p className="text-red-600">Password must be 6 characters</p>
+            )}
+            {errors.password?.type === "maxLength" && (
+              <p className="text-red-600">
+                Password must be less than 20 characters
+              </p>
+            )}
+            {errors.password?.type === "pattern" && (
+              <p className="text-red-600">
+                Password must contain Uppercase, lower case, number and special
+                characters.
+              </p>
+            )}
             <div className="form-control mt-6">
               <input
                 className="btn btn-outline rounded font-bold text-xl text-white bg-gradient-to-r from-[#13a0fe] to-[#022889] border-0 hover:opacity-80"
