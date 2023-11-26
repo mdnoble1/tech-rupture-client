@@ -1,6 +1,7 @@
 import { HiMenuAlt1 } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
+import logo from "../../../assets/logo1.png"
 
 const Navbar = () => {
   const navOptions = (
@@ -104,9 +105,10 @@ const Navbar = () => {
         </div>
         <NavLink to="/">
           <div className="text-white">
-            <h2 className={`font-black text-xl lg:text-3xl cinzel`}>
+            {/* <h2 className={`font-black text-xl lg:text-3xl cinzel`}>
               Tech Rupture
-            </h2>
+            </h2> */}
+            <img className="w-40 lg:w-52" src={logo} alt="" />
           </div>
         </NavLink>
         <div className="navbar-center hidden lg:flex">

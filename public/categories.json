@@ -1,0 +1,562 @@
+[
+    {
+      "_id": 1,
+      "name": "TechGizmo X1000",
+      "image": "https://i.ibb.co/KjnwXt3/smartphone1.png",
+      "description": "Meet the TechGizmo X1000  a sleek smartphone redefining the user experience. Boasting a vibrant 6.5-inch display, powerful processor, and advanced triple-camera system, it seamlessly combines style and innovation. With biometric security features and fast-charging capabilities, the X1000 offers both elegance and efficiency in one sophisticated device.",
+      "tag": "smartphones",
+      "link": "https://en.wikipedia.org/wiki/Smartphone",
+      "vote": 120,
+      "timestamp": "2023-01-11"
+    },
+    {
+      "_id": 2,
+      "name": "PixelX Pro",
+      "image": "https://i.ibb.co/B60Mbn3/smartphone2.png",
+      "description": "Introducing the PixelX Pro  a sleek smartphone designed for exceptional performance. With its stunning 6.2-inch display, advanced camera system, and efficient processor, the PixelX Pro delivers a seamless user experience. Experience security with facial recognition and enjoy extended usage with its robust battery life.",
+      "tag": "smartphones",
+      "link": "https://en.wikipedia.org/wiki/Smartphone",
+      "vote": 95,
+      "timestamp": "2023-02-12"
+    },
+    {
+      "_id": 3,
+      "name": "EcoSmart A1",
+      "image": "https://i.ibb.co/KjnwXt3/smartphone1.png",
+      "description": "Discover the EcoSmart A1  a revolutionary smartphone with sustainability at its core. Featuring a 6-inch eco-friendly display, energy-efficient processor, and recyclable materials, the EcoSmart A1 provides a guilt-free user experience. With biometric security and quick charging, it's the perfect blend of innovation and environmental consciousness.",
+      "tag": "smartphones",
+      "link": "https://en.wikipedia.org/wiki/Smartphone",
+      "vote": 80,
+      "timestamp": "2022-03-13"
+    },
+    {
+      "_id": 4,
+      "name": "SwiftVision X",
+      "image": "https://i.ibb.co/B60Mbn3/smartphone2.png",
+      "description": "SwiftVision X  a smartphone that redefines clarity and speed. Its 6.3-inch display, powered by a lightning-fast processor, ensures a smooth visual experience. The advanced camera system captures every detail, while biometric security and rapid charging enhance user convenience. Elevate your mobile journey with SwiftVision X.",
+      "tag": "smartphones",
+      "link": "https://en.wikipedia.org/wiki/Smartphone",
+      "vote": 110,
+      "timestamp": "2022-04-14"
+    },
+    {
+      "_id": 5,
+      "name": "InnoEdge E2",
+      "image": "https://i.ibb.co/KjnwXt3/smartphone1.png",
+      "description": "InnoEdge E2  a smartphone at the forefront of innovation. Boasting a 6.4-inch edge-to-edge display, powerful processor, and versatile camera system, the InnoEdge E2 delivers a captivating user experience. With biometric security and fast-charging capabilities, it's designed for those who seek cutting-edge technology.",
+      "tag": "smartphones",
+      "link": "https://en.wikipedia.org/wiki/Smartphone",
+      "vote": 95,
+      "timestamp": "2021-05-15"
+    },
+    {
+      "_id": 6,
+      "name": "QuantumQ Q2",
+      "image": "https://i.ibb.co/B60Mbn3/smartphone2.png",
+      "description": "Introducing the QuantumQ Q2  a smartphone that defies expectations. Its 6.1-inch display, powered by a robust processor, offers a seamless visual journey. The QuantumQ Q2's advanced camera system captures life's moments with precision. Experience enhanced security and quick charging in this stylish and efficient device.",
+      "tag": "smartphones",
+      "link": "https://en.wikipedia.org/wiki/Smartphone",
+      "vote": 85,
+      "timestamp": "2021-06-16"
+    },
+    {
+      "_id": 7,
+      "name": "GalaxyElite S10",
+      "image": "https://i.ibb.co/KjnwXt3/smartphone1.png",
+      "description": "GalaxyElite S10  a smartphone that epitomizes excellence. Featuring a 6.5-inch Infinity Display, powerful processor, and versatile camera setup, the GalaxyElite S10 delivers an unparalleled user experience. With secure biometric features and fast-charging capabilities, it's a device crafted for those who demand the best.",
+      "tag": "smartphones",
+      "link": "https://en.wikipedia.org/wiki/Smartphone",
+      "vote": 130,
+      "timestamp": "2020-07-17"
+    },
+    {
+      "_id": 8,
+      "name": "VivoTech V20",
+      "image": "https://i.ibb.co/B60Mbn3/smartphone2.png",
+      "description": "VivoTech V20  a smartphone designed for the tech-savvy individual. Its 6.0-inch Super AMOLED display, powerful processor, and sophisticated camera system offer an immersive user experience. With biometric security and rapid charging, the VivoTech V20 is the epitome of style and functionality.",
+      "tag": "smartphones",
+      "link": "https://en.wikipedia.org/wiki/Smartphone",
+      "vote": 105,
+      "timestamp": "2020-08-18"
+    },
+    {
+        "_id": 9,
+        "name": "QuantumBook Pro",
+        "image": "https://i.ibb.co/JK6CbKR/computer1.png",
+        "description": "Experience the QuantumBook Pro  a sleek and powerful laptop that defines excellence. With a 15.6-inch display, high-performance processor, and cutting-edge graphics, it offers a seamless computing experience. The QuantumBook Pro is crafted for professionals and creatives who demand top-tier performance and style.",
+        "tag": "computers",
+        "link": "https://en.wikipedia.org/wiki/Computer",
+        "vote": 150,
+        "timestamp": "2023-01-11"
+      },
+      {
+        "_id": 10,
+        "name": "InnoDesk A2",
+        "image": "https://i.ibb.co/vkMBWh5/comuputer2.png",
+        "description": "Introducing the InnoDesk A2  a compact desktop powerhouse for modern productivity. With a sleek design, a powerful processor, and ample storage, the InnoDesk A2 transforms your workspace. Whether you're a professional or a student, this computer is built to enhance your efficiency and elevate your computing experience.",
+        "tag": "computers",
+        "link": "https://en.wikipedia.org/wiki/Computer",
+        "vote": 120,
+        "timestamp": "2023-02-12"
+      },
+      {
+        "_id": 11,
+        "name": "EliteBook X1",
+        "image": "https://i.ibb.co/JK6CbKR/computer1.png",
+        "description": "EliteBook X1  a laptop that balances power and portability seamlessly. With a 13.3-inch display, powerful internals, and a sleek aluminum chassis, the EliteBook X1 is designed for professionals on the move. Elevate your work or entertainment experience with the EliteBook X1's precision engineering and cutting-edge features.",
+        "tag": "computers",
+        "link": "https://en.wikipedia.org/wiki/Computer",
+        "vote": 130,
+        "timestamp": "2022-03-13"
+      },
+      {
+        "_id": 12,
+        "name": "SwiftDesk S500",
+        "image": "https://i.ibb.co/vkMBWh5/comuputer2.png",
+        "description": "SwiftDesk S500  a desktop computer that redefines versatility. With a sleek tower design, powerful hardware, and expansive storage options, the SwiftDesk S500 is a powerhouse for both work and play. Experience seamless multitasking and efficient computing with this elegant and high-performance desktop.",
+        "tag": "computers",
+        "link": "https://en.wikipedia.org/wiki/Computer",
+        "vote": 110,
+        "timestamp": "2022-04-14"
+      },
+      {
+        "_id": 13,
+        "name": "ZenBook Pro 15",
+        "image": "https://i.ibb.co/JK6CbKR/computer1.png",
+        "description": "ZenBook Pro 15  a laptop that blends style with raw power. Featuring a 15.6-inch 4K UHD display, potent internals, and a sleek aluminum chassis, the ZenBook Pro 15 is designed for content creators and professionals. Elevate your creative workflow with the immersive visuals and high-performance capabilities of the ZenBook Pro 15.",
+        "tag": "computers",
+        "link": "https://en.wikipedia.org/wiki/Computer",
+        "vote": 140,
+        "timestamp": "2021-05-15"
+      },
+      {
+        "_id": 14,
+        "name": "PowerEdge X500",
+        "image": "https://i.ibb.co/vkMBWh5/comuputer2.png",
+        "description": "PowerEdge X500  a server that stands at the pinnacle of performance and reliability. With robust hardware and advanced management features, the PowerEdge X500 is designed for businesses demanding unparalleled server performance. Enhance your enterprise infrastructure with the efficiency and scalability of the PowerEdge X500.",
+        "tag": "computers",
+        "link": "https://en.wikipedia.org/wiki/Computer",
+        "vote": 160,
+        "timestamp": "2021-06-16"
+      },
+      {
+        "_id": 15,
+        "name": "UltraSlimBook S500",
+        "image": "https://i.ibb.co/JK6CbKR/computer1.png",
+        "description": "UltraSlimBook S500  a laptop that combines sleekness with robust performance. With a 14-inch display, powerful internals, and a slim profile, the UltraSlimBook S500 is perfect for professionals on the go. Elevate your mobile productivity with this stylish and powerful laptop.",
+        "tag": "computers",
+        "link": "https://en.wikipedia.org/wiki/Computer",
+        "vote": 125,
+        "timestamp": "2020-07-17"
+      },
+      {
+        "_id": 16,
+        "name": "ProStation X",
+        "image": "https://i.ibb.co/vkMBWh5/comuputer2.png",
+        "description": "ProStation X  a desktop powerhouse for creative professionals. With a sleek tower design, powerful graphics, and ample storage, the ProStation X is built to handle demanding creative tasks. Elevate your workflow and unleash your creativity with the performance and reliability of the ProStation X.",
+        "tag": "computers",
+        "link": "https://en.wikipedia.org/wiki/Computer",
+        "vote": 145,
+        "timestamp": "2020-08-18"
+      },
+      {
+        "_id": 17,
+        "name": "GameMaster X2",
+        "image": "https://i.ibb.co/Ypngzwk/game1.png",
+        "description": "Enter the world of gaming supremacy with the GameMaster X2  a console that redefines the gaming experience. Featuring cutting-edge graphics, a responsive controller, and a vast game library, the GameMaster X2 is the ultimate companion for avid gamers seeking unparalleled immersion and performance.",
+        "tag": "gaming",
+        "link": "https://en.wikipedia.org/wiki/Gaming",
+        "vote": 180,
+        "timestamp": "2023-01-11"
+      },
+      {
+        "_id": 18,
+        "name": "RogueBlade Gaming PC",
+        "image": "https://i.ibb.co/KFrgDD8/game2.png",
+        "description": "Unleash your gaming potential with the RogueBlade Gaming PC  a powerhouse designed for extreme gaming sessions. With high-performance hardware, customizable RGB lighting, and advanced cooling, the RogueBlade ensures smooth gameplay and stunning visuals. Dominate the gaming arena with the relentless power of the RogueBlade Gaming PC.",
+        "tag": "gaming",
+        "link": "https://en.wikipedia.org/wiki/Gaming",
+        "vote": 200,
+        "timestamp": "2023-02-12"
+      },
+      {
+        "_id": 19,
+        "name": "ArcadeMaster Pro",
+        "image": "https://i.ibb.co/Ypngzwk/game1.png",
+        "description": "Step into the golden age of gaming with the ArcadeMaster Pro  an arcade cabinet that combines retro charm with modern technology. Featuring classic games and a high-resolution display, the ArcadeMaster Pro offers a nostalgic gaming experience for enthusiasts and a new generation of players alike.",
+        "tag": "gaming",
+        "link": "https://en.wikipedia.org/wiki/Gaming",
+        "vote": 150,
+        "timestamp": "2022-03-13"
+      },
+      {
+        "_id": 20,
+        "name": "EpicQuest VR System",
+        "image": "https://i.ibb.co/KFrgDD8/game2.png",
+        "description": "Embark on an unparalleled virtual reality adventure with the EpicQuest VR System  a gaming experience that transcends reality. With immersive visuals, responsive controls, and a vast VR game library, the EpicQuest VR System transports players to fantastical worlds, making every quest an epic journey.",
+        "tag": "gaming",
+        "link": "https://en.wikipedia.org/wiki/Gaming",
+        "vote": 170,
+        "timestamp": "2022-04-14"
+      },
+      {
+        "_id": 21,
+        "name": "EliteGamer Laptop",
+        "image": "https://i.ibb.co/Ypngzwk/game1.png",
+        "description": "Elevate your gaming experience with the EliteGamer Laptop  a high-performance gaming laptop designed for on-the-go enthusiasts. With a powerful GPU, a high-refresh-rate display, and customizable RGB keyboard, the EliteGamer Laptop ensures that every gaming session is an immersive and thrilling adventure.",
+        "tag": "gaming",
+        "link": "https://en.wikipedia.org/wiki/Gaming",
+        "vote": 160,
+        "timestamp": "2021-05-15"
+      },
+      {
+        "_id": 22,
+        "name": "MegaDrive Gaming Console",
+        "image": "https://i.ibb.co/KFrgDD8/game2.png",
+        "description": "Relive the classics with the MegaDrive Gaming Console  a compact yet powerful console that brings retro gaming into the modern era. With a vast library of classic games and modern features, the MegaDrive Gaming Console caters to both nostalgia seekers and a new generation of gamers.",
+        "tag": "gaming",
+        "link": "https://en.wikipedia.org/wiki/Gaming",
+        "vote": 140,
+        "timestamp": "2021-06-16"
+      },
+      {
+        "_id": 23,
+        "name": "StrikerX Gaming Mouse",
+        "image": "https://i.ibb.co/Ypngzwk/game1.png",
+        "description": "Dominate the competition with the StrikerX Gaming Mouse  a precision tool designed for esports enthusiasts. With customizable DPI settings, programmable buttons, and ergonomic design, the StrikerX enhances your gaming performance and ensures a comfortable grip during intense gaming sessions.",
+        "tag": "gaming",
+        "link": "https://en.wikipedia.org/wiki/Gaming",
+        "vote": 120,
+        "timestamp": "2020-07-17"
+      },
+      {
+        "_id": 24,
+        "name": "ThunderBeast Gaming Headset",
+        "image": "https://i.ibb.co/KFrgDD8/game2.png",
+        "description": "Immerse yourself in the gaming realm with the ThunderBeast Gaming Headset  a headset that delivers powerful audio and comfort. With surround sound capabilities, noise-canceling features, and an adjustable mic, the ThunderBeast enhances your gaming experience, providing a competitive edge in every battle.",
+        "tag": "gaming",
+        "link": "https://en.wikipedia.org/wiki/Gaming",
+        "vote": 130,
+        "timestamp": "2020-08-18"
+      },
+      {
+        "_id": 25,
+        "name": "SwiftApp Pro",
+        "image": "https://i.ibb.co/1mV0PVN/software1.png",
+        "description": "Boost your productivity with SwiftApp Pro  a feature-packed software designed for seamless task management. With an intuitive user interface and advanced features, SwiftApp Pro streamlines your workflow. Stay organized, collaborate effortlessly, and enhance your efficiency with this essential productivity tool.",
+        "tag": "software & apps",
+        "link": "https://en.wikipedia.org/wiki/Software",
+        "vote": 80,
+        "timestamp": "2023-01-11"
+      },
+      {
+        "_id": 26,
+        "name": "CyberShield Security Suite",
+        "image": "https://i.ibb.co/Fh4LdW6/software2.png",
+        "description": "Ensure your digital safety with CyberShield Security Suite  a comprehensive software solution that protects against cyber threats. Featuring advanced antivirus, firewall, and privacy tools, CyberShield safeguards your digital life. Experience peace of mind knowing your data is secure in the ever-evolving digital landscape.",
+        "tag": "software & apps",
+        "link": "https://en.wikipedia.org/wiki/Software",
+        "vote": 90,
+        "timestamp": "2023-02-12"
+      },
+      {
+        "_id": 27,
+        "name": "InnoCode IDE",
+        "image": "https://i.ibb.co/1mV0PVN/software1.png",
+        "description": "Elevate your coding experience with InnoCode IDE  a powerful integrated development environment. With intelligent code completion, debugging tools, and project management features, InnoCode IDE is tailored for developers seeking efficiency and precision. Simplify your coding journey and unlock the full potential of your projects.",
+        "tag": "software & apps",
+        "link": "https://en.wikipedia.org/wiki/Software",
+        "vote": 100,
+        "timestamp": "2022-03-13"
+      },
+      {
+        "_id": 28,
+        "name": "TechTune System Optimizer",
+        "image": "https://i.ibb.co/Fh4LdW6/software2.png",
+        "description": "Revitalize your computer's performance with TechTune System Optimizer  a software solution designed to enhance system speed and stability. Featuring disk cleanup, registry optimization, and performance monitoring, TechTune ensures your computer runs at its peak. Experience a faster, smoother, and more efficient computing experience with TechTune.",
+        "tag": "software & apps",
+        "link": "https://en.wikipedia.org/wiki/Software",
+        "vote": 85,
+        "timestamp": "2022-04-14"
+      },
+      {
+        "_id": 29,
+        "name": "QuantumSync File Manager",
+        "image": "https://i.ibb.co/1mV0PVN/software1.png",
+        "description": "Simplify file management with QuantumSync File Manager  a user-friendly software solution with advanced features. With intuitive navigation, file encryption, and cloud synchronization, QuantumSync File Manager transforms the way you organize and access your files. Experience seamless file management with this cutting-edge software.",
+        "tag": "software & apps",
+        "link": "https://en.wikipedia.org/wiki/Software",
+        "vote": 70,
+        "timestamp": "2021-05-15"
+      },
+      {
+        "_id": 30,
+        "name": "VirtualTech VR Platform",
+        "image": "https://i.ibb.co/Fh4LdW6/software2.png",
+        "description": "Enter the immersive world of VirtualTech VR Platform  a software solution that transports users to virtual realms. With a vast library of experiences, customizable environments, and intuitive controls, VirtualTech VR Platform revolutionizes virtual reality. Explore new dimensions and possibilities with this groundbreaking VR software.",
+        "tag": "software & apps",
+        "link": "https://en.wikipedia.org/wiki/Software",
+        "vote": 75,
+        "timestamp": "2021-06-16"
+      },
+      {
+        "_id": 31,
+        "name": "CodeGuard Backup Solution",
+        "image": "https://i.ibb.co/1mV0PVN/software1.png",
+        "description": "Protect your digital assets with CodeGuard Backup Solution  a reliable software designed for secure data backups. With automated scheduling, version control, and encryption, CodeGuard ensures the safety of your valuable data. Safeguard your digital work and memories with this essential backup solution.",
+        "tag": "software & apps",
+        "link": "https://en.wikipedia.org/wiki/Software",
+        "vote": 80,
+        "timestamp": "2020-07-17"
+      },
+      {
+        "_id": 32,
+        "name": "SmartHome Control Hub",
+        "image": "https://i.ibb.co/Fh4LdW6/software2.png",
+        "description": "Transform your living space with the SmartHome Control Hub  a software and tech marvel that centralizes home automation. With seamless device integration, voice control, and energy management features, the SmartHome Control Hub brings intelligence and efficiency to your home. Experience the future of smart living with this innovative solution.",
+        "tag": "software & apps",
+        "link": "https://en.wikipedia.org/wiki/Software",
+        "vote": 95,
+        "timestamp": "2020-08-18"
+      },
+      {
+        "_id": 33,
+        "name": "GreenPower Solar Panel",
+        "image": "https://i.ibb.co/Wc20WW3/eco1.png",
+        "description": "Harness the power of the sun with the GreenPower Solar Panel  an eco-friendly solution for sustainable energy. Featuring advanced photovoltaic technology, weather-resistant design, and efficient energy conversion, the GreenPower Solar Panel empowers you to generate clean and renewable energy for your home or business.",
+        "tag": "eco tech",
+        "link": "https://en.wikipedia.org/wiki/Ecotechnology",
+        "vote": 120,
+        "timestamp": "2023-04-01"
+      },
+      {
+        "_id": 34,
+        "name": "EcoHeat Smart Thermostat",
+        "image": "https://i.ibb.co/LrBQSmH/eco2.png",
+        "description": "Optimize your home's energy usage with the EcoHeat Smart Thermostat  a sustainable solution for efficient heating and cooling. With smart scheduling, occupancy sensing, and energy usage insights, the EcoHeat Smart Thermostat helps you reduce your carbon footprint and achieve a greener, more eco-conscious lifestyle.",
+        "tag": "eco tech",
+        "link": "https://en.wikipedia.org/wiki/Ecotechnology",
+        "vote": 90,
+        "timestamp": "2023-05-02"
+      },
+      {
+        "_id": 35,
+        "name": "BreatheFresh Air Purifier",
+        "image": "https://i.ibb.co/Wc20WW3/eco1.png",
+        "description": "Improve your indoor air quality with the BreatheFresh Air Purifier  an eco-conscious solution for clean and fresh air. Featuring advanced filtration technology and energy-efficient operation, the BreatheFresh Air Purifier removes pollutants and allergens, creating a healthier living environment while minimizing environmental impact.",
+        "tag": "eco tech",
+        "link": "https://en.wikipedia.org/wiki/Ecotechnology",
+        "vote": 110,
+        "timestamp": "2022-06-03"
+      },
+      {
+        "_id": 36,
+        "name": "EcoDrive Electric Car",
+        "image": "https://i.ibb.co/LrBQSmH/eco2.png",
+        "description": "Embark on a sustainable journey with the EcoDrive Electric Car  an eco-friendly vehicle designed for emission-free transportation. With cutting-edge battery technology, sleek design, and smart connectivity features, the EcoDrive Electric Car combines style with environmental responsibility, making every drive a step towards a greener future.",
+        "tag": "eco tech",
+        "link": "https://en.wikipedia.org/wiki/Ecotechnology",
+        "vote": 130,
+        "timestamp": "2022-07-04"
+      },
+      {
+        "_id": 37,
+        "name": "RecycleMaster Waste Sorter",
+        "image": "https://i.ibb.co/Wc20WW3/eco1.png",
+        "description": "Embrace sustainable waste management with the RecycleMaster Waste Sorter  a smart solution for efficient recycling. With automated sorting, user-friendly interface, and real-time recycling statistics, the RecycleMaster Waste Sorter encourages responsible waste disposal and promotes a circular economy for a cleaner, greener planet.",
+        "tag": "eco tech",
+        "link": "https://en.wikipedia.org/wiki/Ecotechnology",
+        "vote": 100,
+        "timestamp": "2021-08-05"
+      },
+      {
+        "_id": 38,
+        "name": "EcoGarden Smart Watering System",
+        "image": "https://i.ibb.co/LrBQSmH/eco2.png",
+        "description": "Conserve water and nurture your garden with the EcoGarden Smart Watering System  a sustainable solution for efficient irrigation. With smart scheduling, weather-based adjustments, and water usage insights, the EcoGarden Smart Watering System promotes water conservation while ensuring your plants thrive in an eco-friendly manner.",
+        "tag": "eco tech",
+        "link": "https://en.wikipedia.org/wiki/Ecotechnology",
+        "vote": 80,
+        "timestamp": "2021-09-06"
+      },
+      {
+        "_id": 39,
+        "name": "SolarFlare LED Lighting",
+        "image": "https://i.ibb.co/Wc20WW3/eco1.png",
+        "description": "Illuminate your space sustainably with SolarFlare LED Lighting  an energy-efficient lighting solution powered by the sun. With integrated solar panels, durable design, and smart controls, SolarFlare LED Lighting provides eco-friendly illumination, reducing your reliance on conventional power sources for a brighter and greener future.",
+        "tag": "eco tech",
+        "link": "https://en.wikipedia.org/wiki/Ecotechnology",
+        "vote": 95,
+        "timestamp": "2020-10-07"
+      },
+      {
+        "_id": 40,
+        "name": "EcoPrint Recycled Printer",
+        "image": "https://i.ibb.co/LrBQSmH/eco2.png",
+        "description": "Make every print eco-friendly with the EcoPrint Recycled Printer  a sustainable printing solution designed for minimal environmental impact. With recycled materials, energy-efficient operation, and high-quality printing capabilities, the EcoPrint Recycled Printer delivers both performance and sustainability for conscious printing practices.",
+        "tag": "eco tech",
+        "link": "https://en.wikipedia.org/wiki/Ecotechnology",
+        "vote": 85,
+        "timestamp": "2020-11-08"
+      },
+      {
+        "_id": 41,
+        "name": "InnoVision Smart Glasses",
+        "image": "https://i.ibb.co/T8f7pLq/feture1.png",
+        "description": "Experience the future of augmented reality with InnoVision Smart Glasses  cutting-edge eyewear that seamlessly blends the digital and physical worlds. With a sleek design, AR capabilities, and intuitive controls, InnoVision Smart Glasses redefine how you interact with information, making every moment extraordinary.",
+        "tag": "featured",
+        "link": "https://en.wikipedia.org/wiki/List_of_Google_products",
+        "vote": 200,
+        "timestamp": "2023-04-01"
+      },
+      {
+        "_id": 42,
+        "name": "QuantumLeap Quantum Computer",
+        "image": "https://i.ibb.co/DrmJCG5/feature2.png",
+        "description": "Step into the realm of quantum computing with QuantumLeap Quantum Computer  a marvel of computational power. With quantum bits, advanced algorithms, and unprecedented processing speed, QuantumLeap reshapes the possibilities of computing. Unleash the potential of quantum technology with this groundbreaking quantum computer.",
+        "tag": "featured",
+        "link": "https://en.wikipedia.org/wiki/List_of_Google_products",
+        "vote": 220,
+        "timestamp": "2023-05-02"
+      },
+      {
+        "_id": 43,
+        "name": "AeroDrone X Pro",
+        "image": "https://i.ibb.co/4pBs8TN/feature3.png",
+        "description": "Soar to new heights with the AeroDrone X Pro  an advanced drone that combines intelligent features with powerful performance. With automated flight modes, 4K camera capabilities, and obstacle avoidance technology, the AeroDrone X Pro is the epitome of aerial innovation, capturing stunning moments from above.",
+        "tag": "featured",
+        "link": "https://en.wikipedia.org/wiki/List_of_Google_products",
+        "vote": 180,
+        "timestamp": "2022-06-03"
+      },
+      {
+        "_id": 44,
+        "name": "NeuroSync Mind-Reading Device",
+        "image": "https://i.ibb.co/T8f7pLq/feture1.png",
+        "description": "Explore the possibilities of mind-reading technology with the NeuroSync Mind-Reading Device  a revolutionary device that translates thoughts into actions. With advanced neural interface technology, the NeuroSync opens new avenues for communication and control, offering a glimpse into the future of human-machine interaction.",
+        "tag": "featured",
+        "link": "https://en.wikipedia.org/wiki/List_of_Google_products",
+        "vote": 210,
+        "timestamp": "2022-07-04"
+      },
+      {
+        "_id": 45,
+        "name": "LunarHarmony Space Habitat",
+        "image": "https://i.ibb.co/DrmJCG5/feature2.png",
+        "description": "Embark on the journey to sustainable space living with LunarHarmony Space Habitat  a modular living space designed for future lunar exploration. With advanced life support systems, recyclable materials, and efficient space utilization, LunarHarmony paves the way for sustainable human presence beyond Earth.",
+        "tag": "featured",
+        "link": "https://en.wikipedia.org/wiki/List_of_Google_products",
+        "vote": 190,
+        "timestamp": "2021-08-05"
+      },
+      {
+        "_id": 46,
+        "name": "SolarSail Pro Spacecraft",
+        "image": "https://i.ibb.co/4pBs8TN/feature3.png",
+        "description": "Embark on an interstellar journey with the SolarSail Pro Spacecraft  a revolutionary spacecraft powered by solar sails. With advanced propulsion technology, sustainable energy sources, and long-range capabilities, SolarSail Pro opens the door to exploration beyond our solar system, redefining the future of space travel.",
+        "tag": "featured",
+        "link": "https://en.wikipedia.org/wiki/List_of_Google_products",
+        "vote": 170,
+        "timestamp": "2021-09-06"
+      },
+      {
+        "_id": 47,
+        "name": "QuantumVision Holographic Display",
+        "image": "https://i.ibb.co/T8f7pLq/feture1.png",
+        "description": "Immerse yourself in holographic experiences with QuantumVision Holographic Display  a cutting-edge display technology that brings virtual content to life. With vibrant holograms, 3D imaging, and intuitive controls, QuantumVision elevates the visual experience, blurring the line between the digital and physical worlds.",
+        "tag": "featured",
+        "link": "https://en.wikipedia.org/wiki/List_of_Google_products",
+        "vote": 230,
+        "timestamp": "2020-10-07"
+      },
+      {
+        "_id": 48,
+        "name": "BioTech Harmony Implant",
+        "image": "https://i.ibb.co/DrmJCG5/feature2.png",
+        "description": "Embark on a journey towards enhanced well-being with the BioTech Harmony Implant  a groundbreaking bioimplant that harmonizes and optimizes bodily functions. With advanced biotechnology, personalized health insights, and seamless integration, BioTech Harmony redefines the connection between technology and human wellness.",
+        "tag": "featured",
+        "link": "https://en.wikipedia.org/wiki/List_of_Google_products",
+        "vote": 200,
+        "timestamp": "2020-11-08"
+      },
+      {
+        "_id": 49,
+        "name": "HyperZoom Camera Drone",
+        "image": "https://i.ibb.co/CnRD4k1/trending1.png",
+        "description": "Capture breathtaking moments from new heights with the HyperZoom Camera Drone  a versatile drone with unparalleled zoom capabilities. With 4K video recording, intelligent flight modes, and an exceptional zoom lens, the HyperZoom Drone empowers content creators and enthusiasts to push the boundaries of aerial photography.",
+        "tag": "trending",
+        "link": "https://en.wikipedia.org/wiki/Trend_Technologies",
+        "vote": 160,
+        "timestamp": "2023-05-21"
+      },
+      {
+        "_id": 50,
+        "name": "NeuraFit Smart Fitness Band",
+        "image": "https://i.ibb.co/pKq081g/trending2.png",
+        "description": "Elevate your fitness journey with the NeuraFit Smart Fitness Band  an intelligent wearable that goes beyond tracking. With real-time health insights, personalized workout recommendations, and advanced sensors, NeuraFit enhances your fitness routine, ensuring you reach your goals with precision and efficiency.",
+        "tag": "trending",
+        "link": "https://en.wikipedia.org/wiki/Trend_Technologies",
+        "vote": 150,
+        "timestamp": "2023-06-22"
+      },
+      {
+        "_id": 51,
+        "name": "QuantumSound 360 Audio System",
+        "image": "https://i.ibb.co/t8Y6p00/trending3.png",
+        "description": "Immerse yourself in a 360-degree audio experience with the QuantumSound 360 Audio System  a cutting-edge sound system that transcends traditional stereo. With spatial audio technology, customizable soundscapes, and sleek design, QuantumSound redefines how you experience music, movies, and virtual reality.",
+        "tag": "trending",
+        "link": "https://en.wikipedia.org/wiki/Trend_Technologies",
+        "vote": 170,
+        "timestamp": "2022-07-23"
+      },
+      {
+        "_id": 52,
+        "name": "FutureFit VR Workout Experience",
+        "image": "https://i.ibb.co/tp3Mz9Z/trending4.png",
+        "description": "Transform your workouts with the FutureFit VR Workout Experience  a virtual reality fitness platform that brings excitement to exercise. With immersive environments, interactive workouts, and real-time feedback, FutureFit makes staying active enjoyable and effective, creating a new era of fitness engagement.",
+        "tag": "trending",
+        "link": "https://en.wikipedia.org/wiki/Trend_Technologies",
+        "vote": 180,
+        "timestamp": "2022-08-24"
+      },
+      {
+        "_id": 53,
+        "name": "AeroGlide Electric Scooter",
+        "image": "https://i.ibb.co/4M6Cbxh/trending5.png",
+        "description": "Embrace urban mobility with the AeroGlide Electric Scooter  a sleek and efficient scooter designed for modern commuters. With a powerful electric motor, foldable design, and smart connectivity features, the AeroGlide offers a convenient and eco-friendly solution for navigating city streets with style.",
+        "tag": "trending",
+        "link": "https://en.wikipedia.org/wiki/Trend_Technologies",
+        "vote": 140,
+        "timestamp": "2021-09-25"
+      },
+      {
+        "_id": 54,
+        "name": "SolarSync Portable Charger",
+        "image": "https://i.ibb.co/CnRD4k1/trending1.png",
+        "description": "Stay charged on the go with the SolarSync Portable Charger  a solar-powered charging solution for your devices. With high-efficiency solar panels, multiple charging ports, and a durable design, SolarSync ensures you have reliable power wherever your adventures take you, all while embracing sustainable energy.",
+        "tag": "trending",
+        "link": "https://en.wikipedia.org/wiki/Trend_Technologies",
+        "vote": 130,
+        "timestamp": "2021-10-26"
+      },
+      {
+        "_id": 55,
+        "name": "BioSense Health Monitor",
+        "image": "https://i.ibb.co/pKq081g/trending2.png",
+        "description": "Prioritize your well-being with the BioSense Health Monitor  a comprehensive health tracking device that puts your health data at your fingertips. With vital sign monitoring, personalized health insights, and a user-friendly interface, BioSense empowers you to take control of your health journey with confidence.",
+        "tag": "trending",
+        "link": "https://en.wikipedia.org/wiki/Trend_Technologies",
+        "vote": 160,
+        "timestamp": "2020-11-27"
+      },
+      {
+        "_id": 56,
+        "name": "UrbanGrow Smart Indoor Garden",
+        "image": "https://i.ibb.co/t8Y6p00/trending3.png",
+        "description": "Bring nature into your home with the UrbanGrow Smart Indoor Garden  an innovative solution for urban gardening. With automated watering, adjustable LED lighting, and space-efficient design, UrbanGrow makes cultivating your favorite herbs and plants a seamless and enjoyable experience, even in limited spaces.",
+        "tag": "trending",
+        "link": "https://en.wikipedia.org/wiki/Trend_Technologies",
+        "vote": 150,
+        "timestamp": "2020-12-28"
+      }
+  ]
