@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-import { useContext } from "react";
-import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
@@ -16,19 +16,18 @@ const Register = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-
     createUser(data.email, data.password).then((result) => {
       const loggedUser = result.user;
       console.log(loggedUser);
+
       updateUserProfile(data.name, data.photoURL)
         .then(() => {
-          //console.log('user profile info updated')
+          console.log("user profile info updated");
           // create user entry in the database
           const userInfo = {
             name: data.name,
             email: data.email,
           };
-
           // axiosPublic.post('/users', userInfo)
           //     .then(res => {
           //         if (res.data.insertedId) {
@@ -65,12 +64,15 @@ const Register = () => {
               </label>
               <input
                 type="text"
+                {...register("name", { required: true })}
                 name="name"
                 placeholder="Type Your Name"
                 className="input rounded focus:border-[#13a0fe]"
-                required
               />
             </div>
+            {errors.name && (
+              <span className="text-red-600">Name is required</span>
+            )}
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-semibold text-xl text-[#444]">
@@ -79,11 +81,14 @@ const Register = () => {
               </label>
               <input
                 type="text"
+                {...register("photoURL", { required: true })}
                 placeholder="Your Photo URL"
                 className="input rounded focus:border-[#13a0fe]"
-                required
               />
             </div>
+            {errors.photoURL && (
+              <span className="text-red-600">Photo is required</span>
+            )}
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-semibold text-xl text-[#444]">
@@ -96,7 +101,6 @@ const Register = () => {
                 name="email"
                 placeholder="Type Your Email"
                 className="input rounded focus:border-[#13a0fe]"
-                required
               />
             </div>
             {errors.email && (
@@ -119,7 +123,6 @@ const Register = () => {
                 name="password"
                 placeholder="Type Your Password"
                 className="input rounded focus:border-[#13a0fe]"
-                required
               />
             </div>
             {errors.password?.type === "required" && (
@@ -157,7 +160,9 @@ const Register = () => {
           </form>
         </div>
         <div className="bg-gradient-to-r from-[#022889] to-[#13a0fe] w-full py-20 lg:py-96 text-center text-white rounded-b-xl lg:rounded-3xl">
-          <h2 className="font-bold text-5xl mb-4">Tech Rupture</h2>
+          <Link to="/">
+            <h2 className="font-bold text-5xl mb-4">Tech Rupture</h2>
+          </Link>
           <h2 className="font-semibold text-4xl">Register</h2>
         </div>
       </div>

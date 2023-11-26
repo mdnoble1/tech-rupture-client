@@ -1,66 +1,58 @@
 import { FaGoogle } from "react-icons/fa";
-// import image from "../../assets/others/authentication2.png";
-// import { useContext } from "react";
-// import { useEffect, useState } from "react";
-// import { Link, useLocation, useNavigate } from "react-router-dom";
-// import {
-//   loadCaptchaEnginge,
-//   LoadCanvasTemplate,
-//   validateCaptcha,
-// } from "react-simple-captcha";
-// import { AuthContext } from "../../providers/AuthProvider";
-// import Swal from "sweetalert2";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
-import { Link } from "react-router-dom";
-
-// import { Helmet } from "react-helmet";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
-  //   const { signInUser } = useContext(AuthContext);
-  //   const navigate = useNavigate();
-  //   const location = useLocation();
+  const { signInUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  //   const from = location.state?.form?.pathname || "/";
-  //   console.log(
-  //     "state in the location login page",
-  //     location.state?.form?.pathname
-  //   );
+  const from = location.state?.form?.pathname || "/";
+  console.log(
+    "state in the location login page",
+    location.state?.form?.pathname
+  );
 
-  // const handleLogin = (event) => {
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
 
-  //   event.preventDefault();
-  //   const form = event.target;
-  //   const email = form.email.value;
-  //   const password = form.password.value;
+    console.log(email, password);
 
-  //   console.log(email, password);
-
-  //   signInUser(email, password).then((result) => {
-  //     const user = result.user;
-  //     console.log(user);
-  //     //sweetalert
-  //     Swal.fire({
-  //       title: "User Successfully Logged In !",
-  //       showClass: {
-  //         popup: "animate_animated animate_fadeInDown",
-  //       },
-  //       hideClass: {
-  //         popup: "animate_animated animate_fadeOutUp",
-  //       },
-  //     });
-  //     navigate(from, { replace: true });
-  //   });
-  // };
+    signInUser(email, password).then((result) => {
+      const user = result.user;
+      console.log(user);
+      //sweetalert
+      Swal.fire({
+        title: "User Successfully Logged In !",
+        showClass: {
+          popup: "animate_animated animate_fadeInDown",
+        },
+        hideClass: {
+          popup: "animate_animated animate_fadeOutUp",
+        },
+      });
+      navigate(from, { replace: true });
+    });
+  };
 
   return (
     <section className="container mx-auto lg:mt-10">
       <div className="lg:flex items-center justify-center lg:gap-32">
         <div className="bg-gradient-to-r from-[#022889] to-[#13a0fe] w-full py-20 lg:py-96 text-center text-white rounded-b-xl lg:rounded-3xl">
-          <h2 className="font-bold text-5xl mb-4">Tech Rupture</h2>
+          <Link to="/"><h2 className="font-bold text-5xl mb-4">Tech Rupture</h2></Link>
           <h2 className="font-semibold text-4xl">Login </h2>
         </div>
         <div className="w-11/12 lg:w-full bg-slate-100 rounded-lg drop-shadow-2xl mx-auto">
-          <form className="card-body lg:px-32 pt-12 lg:pt-32 pb-12">
+          <form
+            onSubmit={handleLogin}
+            className="card-body lg:px-32 pt-12 lg:pt-32 pb-12"
+          >
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-semibold text-xl text-[#444]">

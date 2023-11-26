@@ -1,12 +1,11 @@
 import { HiMenuAlt1 } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
-import logo from "../../../assets/logo1.png"
+import logo from "../../../assets/logo1.png";
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
-
   const { user, logOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
@@ -19,15 +18,12 @@ const Navbar = () => {
       });
   };
 
-
   const navOptions = (
     <>
       <li>
         <NavLink
           to="/"
-          className={({ isActive }) =>
-            isActive ? `text-black` : `text-white`
-          }
+          className={({ isActive }) => (isActive ? `text-black` : `text-white`)}
         >
           HOME
         </NavLink>
@@ -35,9 +31,7 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/products"
-          className={({ isActive }) =>
-            isActive ? `text-black` : `text-white`
-          }
+          className={({ isActive }) => (isActive ? `text-black` : `text-white`)}
         >
           PRODUCTS
         </NavLink>
@@ -45,9 +39,7 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/login"
-          className={({ isActive }) =>
-            isActive ? `text-black` : `text-white`
-          }
+          className={({ isActive }) => (isActive ? `text-black` : `text-white`)}
         >
           LOGIN
         </NavLink>
@@ -55,9 +47,7 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/register"
-          className={({ isActive }) =>
-            isActive ? `text-black` : `text-white`
-          }
+          className={({ isActive }) => (isActive ? `text-black` : `text-white`)}
         >
           REGISTER
         </NavLink>
@@ -74,7 +64,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="dropdown-content mt-3 z-[1] p-4 drop-shadow-2xl rounded-box w-40
+            className="dropdown-content mt-3 z-[1] p-4 drop-shadow-2xl rounded-box w-48
               md:w-52 font-medium text-black bg-black border border-black bg-opacity-90"
           >
             {navOptions}
@@ -87,21 +77,23 @@ const Navbar = () => {
                         tabIndex={0}
                         className="btn btn-ghost btn-circle avatar"
                       >
-                        <div className="w-10 rounded-full">
+                        <div className="w-8 rounded-full">
                           <img src={user.photoURL} />
                         </div>
                       </label>
                     </div>
                     <div>
-                      <span className="block font-semibold text-sm text-center text-white uppercase">
+                      <span className="block font-semibold text-xs text-center text-white uppercase">
                         {user.displayName}
                       </span>
-                      <button
-                        onClick={handleLogOut}
-                        className="btn btn-xs btn-outline text-[#ffa903]"
-                      >
-                        Logout
-                      </button>
+                      <div className="text-center">
+                        <button
+                          onClick={handleLogOut}
+                          className="btn btn-xs btn-outline text-[#ffa903]"
+                        >
+                          Logout
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </>
