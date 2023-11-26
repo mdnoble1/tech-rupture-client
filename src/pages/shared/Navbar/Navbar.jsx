@@ -130,7 +130,7 @@ const Navbar = () => {
           <div className="dropdown dropdown-end">
             <label
               tabIndex={0}
-              className="btn btn-ghost btn-circle avatar text-6xl text-white"
+              className="btn btn-ghost btn-circle btn-lg avatar text-5xl text-white"
             >
               <CgProfile></CgProfile>
             </label>
