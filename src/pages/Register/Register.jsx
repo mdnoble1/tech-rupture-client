@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
   const {
@@ -13,6 +14,9 @@ const Register = () => {
 
   const { createUser, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
+
+  // password show and hide
+  const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit = (data) => {
     console.log(data);
@@ -112,18 +116,26 @@ const Register = () => {
                   Password
                 </span>
               </label>
-              <input
-                type="password"
-                {...register("password", {
-                  required: true,
-                  minLength: 6,
-                  maxLength: 20,
-                  pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
-                })}
-                name="password"
-                placeholder="Type Your Password"
-                className="input rounded focus:border-[#13a0fe]"
-              />
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  {...register("password", {
+                    required: true,
+                    minLength: 6,
+                    maxLength: 20,
+                    pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
+                  })}
+                  name="password"
+                  placeholder="Type Your Password"
+                  className="input rounded focus:border-[#13a0fe] w-full"
+                />
+                <span
+                  className="absolute top-4 right-2"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                </span>
+              </div>
             </div>
             {errors.password?.type === "required" && (
               <p className="text-red-600">Password is required</p>

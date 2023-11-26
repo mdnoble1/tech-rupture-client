@@ -1,5 +1,5 @@
-import { FaGoogle } from "react-icons/fa";
-import { useContext } from "react";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 
@@ -15,6 +15,9 @@ const Login = () => {
     "state in the location login page",
     location.state?.form?.pathname
   );
+
+  // password show and hide
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -45,7 +48,9 @@ const Login = () => {
     <section className="container mx-auto lg:mt-10">
       <div className="lg:flex items-center justify-center lg:gap-32">
         <div className="bg-gradient-to-r from-[#022889] to-[#13a0fe] w-full py-20 lg:py-96 text-center text-white rounded-b-xl lg:rounded-3xl">
-          <Link to="/"><h2 className="font-bold text-5xl mb-4">Tech Rupture</h2></Link>
+          <Link to="/">
+            <h2 className="font-bold text-5xl mb-4">Tech Rupture</h2>
+          </Link>
           <h2 className="font-semibold text-4xl">Login </h2>
         </div>
         <div className="w-11/12 lg:w-full bg-slate-100 rounded-lg drop-shadow-2xl mx-auto">
@@ -73,13 +78,21 @@ const Login = () => {
                   Password
                 </span>
               </label>
-              <input
-                type="password"
-                name="password"
-                placeholder="Type Your Password"
-                className="input rounded focus:border-[#13a0fe]"
-                required
-              />
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  placeholder="Type Your Password"
+                  className="input rounded focus:border-[#13a0fe] w-full"
+                  required
+                />
+                <span
+                  className="absolute top-4 right-2"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                </span>
+              </div>
             </div>
 
             <div className="form-control mt-6">
