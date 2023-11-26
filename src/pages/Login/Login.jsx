@@ -11,10 +11,10 @@ const Login = () => {
   const location = useLocation();
 
   const from = location.state?.form?.pathname || "/";
-  console.log(
-    "state in the location login page",
-    location.state?.form?.pathname
-  );
+  // console.log(
+  //   "state in the location login page",
+  //   location.state?.form?.pathname
+  // );
 
   // password show and hide
   const [showPassword, setShowPassword] = useState(false);
@@ -25,13 +25,15 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    console.log(email, password);
+    // console.log(email, password);
 
-    signInUser(email, password).then((result) => {
-      const user = result.user;
-      console.log(user);
+    signInUser(email, password)
+      .then(() => {
+        // const user = result.user;
+        // console.log(user);
       //sweetalert
-      Swal.fire({
+        Swal.fire({
+          icon: "success",
         title: "User Successfully Logged In !",
         showClass: {
           popup: "animate_animated animate_fadeInDown",
@@ -40,8 +42,25 @@ const Login = () => {
           popup: "animate_animated animate_fadeOutUp",
         },
       });
+      event.target.reset()
       navigate(from, { replace: true });
+    })
+    .catch(() =>  {
+      // console.log(error)
+
+      //sweetalert
+      Swal.fire({
+        icon: "error",
+        title: "Email and Password Doesn't Match !",
+        showClass: {
+          popup: "animate_animated animate_fadeInDown",
+        },
+        hideClass: {
+          popup: "animate_animated animate_fadeOutUp",
+        },
+      });
     });
+    event.target.reset()
   };
 
   return (
