@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 // import { AuthContext } from "../../providers/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import useAuth from "../../hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const {
@@ -56,6 +57,9 @@ const Register = () => {
 
   return (
     <section className="container mx-auto lg:mt-10">
+      <Helmet>
+        <title>Tech Rupture | Register</title>
+      </Helmet>
       <div className="lg:flex items-center justify-center lg:gap-32">
         <div className="w-11/12 lg:w-full bg-slate-100 rounded-lg drop-shadow-2xl mx-auto">
           <form

@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { signInUser, signInWithGoogle } = useAuth();
@@ -97,6 +98,9 @@ const Login = () => {
   };
   return (
     <section className="container mx-auto lg:mt-10">
+      <Helmet>
+        <title>Tech Rupture | Login</title>
+      </Helmet>
       <div className="lg:flex items-center justify-center lg:gap-32">
         <div className="bg-gradient-to-r from-[#022889] to-[#13a0fe] w-full py-20 lg:py-96 text-center text-white rounded-b-xl lg:rounded-3xl">
           <Link to="/">

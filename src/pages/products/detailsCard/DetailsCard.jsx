@@ -2,15 +2,18 @@
 import { NavLink } from "react-router-dom";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 import { TbMessageReport } from "react-icons/tb";
-
-
-
+import { Helmet } from "react-helmet-async";
 
 const DetailsCard = ({ product }) => {
   const { image, name, description, tag, link, vote, timestamp } = product;
 
   return (
     <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 justify-center w-11/12">
+      {name && (
+        <Helmet>
+          <title>{`Tech Rupture | ${name}`}</title>
+        </Helmet>
+      )}
       <div className="col-span-2">
         <div>
           <img className="rounded md:rounded-lg" src={image} alt="" />
