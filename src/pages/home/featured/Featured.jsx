@@ -5,10 +5,19 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FaArrowAltCircleUp } from "react-icons/fa";
+import SectionTitle from "../../../components/SectionTitle";
 
 const Featured = ({ items }) => {
   return (
-    <section>
+    <section className="my-16">
+      <SectionTitle
+        title={`Featured Innovations`}
+        description={`Discover a future of innovation with our featured products—smart
+        glasses, quantum computing, advanced drones, mind-reading tech, space
+        habitats, solar-powered spacecraft, holographic displays, and
+        bio implants. Redefine possibilities with these technological marvels.`}
+      ></SectionTitle>
+
       <div>
         <Swiper
           slidesPerView={1}
@@ -40,10 +49,19 @@ const Featured = ({ items }) => {
                     alt=""
                   />
                   <div className="my-4 h-20">
-                    <h2 className="font-bold text-lg text-black mb-2">{item.name}</h2>
-                    <p className="font-semibold text-sm text-gray-500 bg-sky-300 w-fit rounded px-2 mx-auto">#{item.tag}</p>
+                    <h2 className="font-bold text-lg text-black mb-2">
+                      {item.name}
+                    </h2>
+                    <p className="font-semibold text-sm text-gray-500 bg-sky-300 w-fit rounded px-2 mx-auto">
+                      #{item.tag}
+                    </p>
                   </div>
-                  <button className="btn btn-outline w-10/12 text-[#13a0fe] mt-2 mb-4"><FaArrowAltCircleUp className="text-4xl"></FaArrowAltCircleUp><span className="font-semibold text-lg ml-4">{item.vote}</span></button>
+                  <button className="btn btn-outline w-10/12 text-[#13a0fe] mt-2 mb-4">
+                    <FaArrowAltCircleUp className="text-4xl"></FaArrowAltCircleUp>
+                    <span className="font-semibold text-lg ml-4">
+                      {item.vote}
+                    </span>
+                  </button>
                 </div>
               </SwiperSlide>
             ))}
