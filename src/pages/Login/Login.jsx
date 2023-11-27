@@ -7,7 +7,6 @@ import useAuth from "../../hooks/useAuth";
 import { useState } from "react";
 
 const Login = () => {
-  
   const { signInUser, signInWithGoogle } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
@@ -108,7 +107,7 @@ const Login = () => {
         <div className="w-11/12 lg:w-full bg-slate-100 rounded-lg drop-shadow-2xl mx-auto">
           <form
             onSubmit={handleLogin}
-            className="card-body lg:px-32 pt-12 lg:pt-32 pb-12"
+            className="card-body lg:px-32 pt-12 lg:pt-32 "
           >
             <div className="form-control">
               <label className="label">
@@ -154,22 +153,22 @@ const Login = () => {
                 value="Login"
               />
             </div>
-            <div className="mt-4 text-center">
-              <p className="font-medium text-lg mb-4">
-                New in TechRupture ? Please{" "}
-                <Link to="/register">
-                  <span className="text-[#13a0fe]">Register</span>
-                </Link>
-              </p>
-              <p className="font-medium text-lg">Or Sign In With</p>
-              <button
-                onClick={handleLoginWithGoogle}
-                className="btn btn-circle btn-outline mt-4 text-[#13a0fe]"
-              >
-                <FaGoogle className="text-2xl"></FaGoogle>
-              </button>
-            </div>
           </form>
+          <div className="mt-4 text-center pb-12">
+            <p className="font-medium text-lg mb-4">
+              New in TechRupture ? Please{" "}
+              <Link to="/register">
+                <span className="text-[#13a0fe]">Register</span>
+              </Link>
+            </p>
+            <p className="font-medium text-lg">Or Sign In With</p>
+            <button
+              onClick={handleLoginWithGoogle}
+              className="btn btn-circle btn-outline mt-4 text-[#13a0fe]"
+            >
+              <FaGoogle className="text-2xl"></FaGoogle>
+            </button>
+          </div>
         </div>
       </div>
     </section>
