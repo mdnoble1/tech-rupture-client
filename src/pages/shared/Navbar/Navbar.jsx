@@ -2,13 +2,10 @@ import { HiMenuAlt1 } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import logo from "../../../assets/logo1.png";
-import { useContext } from "react";
-import { AuthContext } from "../../../providers/AuthProvider";
+import useAuth from "../../../hooks/useAuth";
 
 const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext);
-
-  
+  const { user, logOut } = useAuth();
 
   const handleLogOut = () => {
     logOut()
