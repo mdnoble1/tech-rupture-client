@@ -6,7 +6,7 @@ import Navbar from "../shared/Navbar/Navbar";
 const Products = () => {
   const [products] = useProduct();
 
-  console.log(products);
+  // console.log(products);
 
   return (
     <section>
