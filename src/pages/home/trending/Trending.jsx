@@ -3,6 +3,7 @@
 import SectionTitle from "../../../components/SectionTitle";
 import ButtonSky from "../../../components/ButtonSky";
 import ProductCard from "../../../components/ProductCard";
+import { Link } from "react-router-dom";
 
 const Trending = ({ items }) => {
   return (
@@ -16,7 +17,9 @@ const Trending = ({ items }) => {
           <ProductCard key={item._id} item={item}></ProductCard>
         ))}
       </div>
-      <ButtonSky buttonTitle={`Show all products`}></ButtonSky>
+      <Link to="/products">
+        <ButtonSky buttonTitle={`Show all products`}></ButtonSky>
+      </Link>
     </section>
   );
 };
