@@ -1,16 +1,18 @@
 import { HiMenuAlt1 } from "react-icons/hi";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import logo from "../../../assets/logo1.png";
 import useAuth from "../../../hooks/useAuth";
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
+  const navigate = useNavigate()
 
   const handleLogOut = () => {
     logOut()
       .then(() => {
         console.log("user logged out");
+        navigate("/")
       })
       .catch((error) => {
         console.error(error);
