@@ -7,7 +7,7 @@ import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 
 const ShowReview = ({ reviews }) => {
-  console.log(reviews);
+  // console.log(reviews);
 
   //   const { reviewer_name, reviewer_image, review, rating } = item;
 

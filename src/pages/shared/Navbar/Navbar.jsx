@@ -141,7 +141,7 @@ const Navbar = () => {
                     <div>
                       <div>
                         <img
-                          className="w-10 rounded-full mx-auto my-4"
+                          className="w-12 rounded-full mx-auto my-4"
                           src={user.photoURL}
                         />
                       </div>
