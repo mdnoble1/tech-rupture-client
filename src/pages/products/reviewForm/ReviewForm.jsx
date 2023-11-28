@@ -18,15 +18,17 @@ const ReviewForm = () => {
                 className="input rounded focus:border-[#13a0fe]"
               />
             </div>
+
             {/* image  */}
             <div className="form-control md:w-1/2">
               <label className="label">
                 <span className="label-text font-semibold text-xl text-[#444]">
-                  Photo URL
+                  Photo
                 </span>
               </label>
               <input
                 type="text"
+                name="image"
                 placeholder="Your Photo URL"
                 className="input rounded focus:border-[#13a0fe]"
               />
@@ -51,7 +53,7 @@ const ReviewForm = () => {
               placeholder="Type Your Review"
               cols="10"
               rows="10"
-              className="p-2 rounded focus:border-[#13a0fe]"
+              className="textarea textarea-info"
             ></textarea>
           </div>
           {/* rating  */}
