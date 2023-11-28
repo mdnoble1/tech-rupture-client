@@ -28,7 +28,7 @@ const ProductDetails = () => {
       {/* reviews  */}
       <ShowReview reviews={reviews}></ShowReview>
       {/* review form  */}
-      <ReviewForm></ReviewForm>
+      <ReviewForm product={product}></ReviewForm>
     </section>
   );
 };
