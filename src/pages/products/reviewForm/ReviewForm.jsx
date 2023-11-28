@@ -1,19 +1,23 @@
-import axios from "axios";
+/* eslint-disable react/prop-types */
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import useAuth from "../../../hooks/useAuth";
 
-/* eslint-disable react/prop-types */
 const ReviewForm = ({ product }) => {
   const { name } = product;
   // console.log(name)
 
-    const axiosSecure = useAxiosSecure();
+  const axiosSecure = useAxiosSecure();
+
+  const { user } = useAuth();
+
+  //   console.log(user?.displayName ,user?.photoURL);
 
   const handleReview = (e) => {
     e.preventDefault();
 
-    const reviewerName = e.target.name.value;
-    const reviewerImage = e.target.image.value;
+    // const reviewerName = e.target.name.value;
+    // const reviewerImage = e.target.image.value;
     const review = e.target.review.value;
     const rating = e.target.rating.value;
 
@@ -21,27 +25,26 @@ const ReviewForm = ({ product }) => {
 
     const reviewItem = {
       product_name: name,
-      reviewer_name: reviewerName,
-      reviewer_image: reviewerImage,
+      reviewer_name: user?.displayName,
+      reviewer_image: user?.photoURL,
       review,
       rating,
     };
 
-    axiosSecure.post("/reviews", reviewItem)
-        .then((res) => {
-            console.log(res.data);
-            if(res.data.insertedId){
-                Swal.fire({
-                    icon: "success",
-                    title: "Review Posted Successfully !",
-                    showClass: {
-                      popup: "animate_animated animate_fadeInDown",
-                    },
-                    hideClass: {
-                      popup: "animate_animated animate_fadeOutUp",
-                    },
-                  });
-            }
+    axiosSecure.post("/reviews", reviewItem).then((res) => {
+      console.log(res.data);
+      if (res.data.insertedId) {
+        Swal.fire({
+          icon: "success",
+          title: "Review Posted Successfully !",
+          showClass: {
+            popup: "animate_animated animate_fadeInDown",
+          },
+          hideClass: {
+            popup: "animate_animated animate_fadeOutUp",
+          },
+        });
+      }
     });
 
     e.target.reset();
@@ -57,37 +60,16 @@ const ReviewForm = ({ product }) => {
           onSubmit={handleReview}
           className="card-body lg:px-32 pt-12 lg:pt-32 "
         >
-          <div className="md:flex justify-between items-center gap-12">
-            {/* name  */}
-            <div className="form-control md:w-1/2">
-              <label className="label">
-                <span className="label-text font-semibold text-xl text-[#444]">
-                  Name
-                </span>
-              </label>
-              <input
-                type="text"
-                name="name"
-                placeholder="Type Your Name"
-                required
-                className="input rounded focus:border-[#13a0fe]"
-              />
-            </div>
-
-            {/* image  */}
-            <div className="form-control md:w-1/2">
-              <label className="label">
-                <span className="label-text font-semibold text-xl text-[#444]">
-                  Photo
-                </span>
-              </label>
-              <input
-                type="text"
-                name="image"
-                placeholder="Your Photo URL"
-                required
-                className="input rounded focus:border-[#13a0fe]"
-              />
+          <div className="">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="avatar">
+                <div className="w-20 mask mask-squircle">
+                  <img src={user?.photoURL} />
+                </div>
+              </div>
+              <h2 className="font-medium text-2xl md:text-3xl text-black">
+                {user?.displayName}
+              </h2>
             </div>
           </div>
           {/* review message  */}
