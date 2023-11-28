@@ -2,6 +2,8 @@
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import useAuth from "../../../hooks/useAuth";
+import { Link } from "react-router-dom";
+import ButtonSky from "../../../components/ButtonSky"
 
 const ReviewForm = ({ product }) => {
   const { name } = product;
@@ -120,6 +122,11 @@ const ReviewForm = ({ product }) => {
             />
           </div>
         </form>
+      </div>
+      <div className="mt-12">
+        <Link to="/products">
+          <ButtonSky buttonTitle={`Go Back`}></ButtonSky>
+        </Link>
       </div>
     </div>
   );
