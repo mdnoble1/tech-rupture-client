@@ -7,6 +7,7 @@ import Register from "../pages/Register/Register";
 import Products from "../pages/products/Products";
 import ProductDetails from "../pages/products/productDetails/ProductDetails";
 import PrivateRoute from "./PrivateRoute";
+import Dashboard from "../pages/dashboard/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,15 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        
+      }
+    ]
+  }
 ]);
 
 export default router;
