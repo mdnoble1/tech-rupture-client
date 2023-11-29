@@ -7,7 +7,7 @@ import Register from "../pages/Register/Register";
 import Products from "../pages/products/Products";
 import ProductDetails from "../pages/products/productDetails/ProductDetails";
 import PrivateRoute from "./PrivateRoute";
-import Dashboard from "../pages/dashboard/Dashboard";
+import Dashboard from "../layouts/Dashboard";
 
 const router = createBrowserRouter([
   {
