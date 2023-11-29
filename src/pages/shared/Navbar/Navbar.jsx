@@ -55,7 +55,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-[#13a0fe] w-full px-8 lg:px-24 py-4 lg:py-6 rounded-bl-[45px] md:rounded-bl-[60px]">
+    <nav className="bg-[#13a0fe] w-full px-8 lg:px-24 py-4 lg:py-6">
       <div className="flex justify-between items-center">
         {/* small screen dropdown  */}
         <div className="dropdown lg:hidden">

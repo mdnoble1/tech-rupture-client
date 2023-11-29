@@ -4,6 +4,7 @@ import useProduct from "../../hooks/useProduct";
 import Footer from "../shared/Footer/Footer";
 import Navbar from "../shared/Navbar/Navbar";
 import { useState } from "react";
+import ProductBanner from "./productBanner/ProductBanner";
 
 const Products = () => {
   const [products] = useProduct();
@@ -28,6 +29,7 @@ const Products = () => {
         <title>Tech Rupture | Products</title>
       </Helmet>
       <Navbar></Navbar>
+      <ProductBanner></ProductBanner>
       {/* search field  */}
       <form onSubmit={handleSearch}>
         <div className="flex items-center justify-center mt-16">
