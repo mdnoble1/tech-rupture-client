@@ -23,7 +23,7 @@ const Sidebar = () => {
         </div>
         <li className="mb-6">
           <NavLink
-            to="/dashboard/userHome"
+            to="/dashboard/profile"
             className={({ isActive }) =>
               isActive
                 ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`

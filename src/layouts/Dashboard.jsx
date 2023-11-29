@@ -9,13 +9,17 @@ const Dashboard = () => {
       <Helmet>
         <title>Tech Rupture | Dashboard</title>
       </Helmet>
-      <div className="md:flex">
+      <div className="md:grid grid-cols-4">
         <div className="hidden md:block">
           <Sidebar></Sidebar>
         </div>
-        <div>
-          <div className="md:hidden"><Topbar></Topbar></div>
-          <Outlet></Outlet>
+        <div className="col-span-3">
+          <div className="md:hidden">
+            <Topbar></Topbar>
+          </div>
+          <div>
+            <Outlet></Outlet>
+          </div>
         </div>
       </div>
     </section>

@@ -8,6 +8,7 @@ import Products from "../pages/products/Products";
 import ProductDetails from "../pages/products/productDetails/ProductDetails";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../layouts/Dashboard";
+import MyProfile from "../pages/dashboard/MyProfile/MyProfile";
 
 const router = createBrowserRouter([
   {
@@ -42,7 +43,8 @@ const router = createBrowserRouter([
     element: <Dashboard></Dashboard>,
     children: [
       {
-        
+        path: "profile",
+        element: <MyProfile></MyProfile>
       }
     ]
   }
