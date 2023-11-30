@@ -9,17 +9,14 @@ import useSearch from "../../hooks/useSearch";
 
 const Products = () => {
   // const [products] = useProduct();
-  const [ search, setSearch ] = useState('');
+  const [search, setSearch] = useState("");
 
-  
   // console.log(search);
 
-  const [ products ] = useSearch(search);
+  const [products] = useSearch(search);
 
   console.log(products);
 
-  
-  
   const handleSearch = (e) => {
     e.preventDefault();
 
@@ -55,11 +52,17 @@ const Products = () => {
           </div>
         </div>
       </form>
-      <div className="container mx-auto text-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 my-16">
-        {products?.map((item) => (
-          <ProductCard key={item._id} item={item}></ProductCard>
-        ))}
-      </div>
+      {products.length == 0 ? (
+        <div>
+          <p className="font-semibold text-4xl text-center my-16">No Data Found !</p>
+        </div>
+      ) : (
+        <div className="container mx-auto text-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 my-16">
+          {products?.map((item) => (
+            <ProductCard key={item._id} item={item}></ProductCard>
+          ))}
+        </div>
+      )}
       <Footer></Footer>
     </section>
   );
