@@ -6,6 +6,8 @@ import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import useAuth from "../../hooks/useAuth";
 import { Helmet } from "react-helmet-async";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const {
@@ -17,6 +19,7 @@ const Register = () => {
   // const { createUser, updateUserProfile } = useContext(AuthContext);
   const { createUser, updateUserProfile } = useAuth();
   const navigate = useNavigate();
+  const axiosPublic = useAxiosPublic();
 
   // password show and hide
   const [showPassword, setShowPassword] = useState(false);
@@ -34,22 +37,23 @@ const Register = () => {
           const userInfo = {
             name: data.name,
             email: data.email,
+            
           };
-          // axiosPublic.post('/users', userInfo)
-          //     .then(res => {
-          //         if (res.data.insertedId) {
-          //             console.log('user added to the database')
-          //             reset();
-          //             Swal.fire({
-          //                 position: 'top-end',
-          //                 icon: 'success',
-          //                 title: 'User created successfully.',
-          //                 showConfirmButton: false,
-          //                 timer: 1500
-          //             });
-          //             navigate('/');
-          //         }
-          //     })
+          axiosPublic.post('/users', userInfo)
+              .then(res => {
+                  if (res.data.insertedId) {
+                      // console.log('user added to the database')
+                      // reset();
+                      Swal.fire({
+                          position: 'center',
+                          icon: 'success',
+                          title: 'User Created Successfully.',
+                          showConfirmButton: false,
+                          timer: 1500
+                      });
+                      navigate('/');
+                  }
+              })
         })
         .catch((error) => console.log(error));
     });
