@@ -45,7 +45,7 @@ const Topbar = () => {
             </li>
             <li className="mb-4">
               <NavLink
-                to="/dashboard/payment"
+                to="/dashboard/myProduct"
                 className={({ isActive }) =>
                   isActive
                     ? `text-[#13a0fe] flex items-center gap-3 font-bold uppercase`

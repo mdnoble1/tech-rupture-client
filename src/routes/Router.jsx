@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../layouts/Dashboard";
 import MyProfile from "../pages/dashboard/MyProfile/MyProfile";
 import AddProduct from "../pages/dashboard/addProduct/AddProduct";
+import MyProduct from "../pages/dashboard/myProduct/MyProduct";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "addProduct",
         element: <AddProduct></AddProduct>
+      },
+      {
+        path: "myProduct",
+        element: <MyProduct></MyProduct>
       },
     ]
   }

@@ -7,7 +7,7 @@ import { CgProfile } from "react-icons/cg";
 
 const Sidebar = () => {
   return (
-    <div className="md:w-52 lg:w-96 bg-[#13a0fe] flex justify-center min-h-full">
+    <div className="md:w-52 lg:w-96 bg-[#13a0fe] flex justify-center h-[1000px] min-h-full">
       <ul className="mt-6 lg:mt-12">
         <div className="text-black mb-10 lg:mb-20">
           <NavLink to="/">
@@ -47,7 +47,7 @@ const Sidebar = () => {
         </li>
         <li className="mb-10">
           <NavLink
-            to="/dashboard/payment"
+            to="/dashboard/myProduct"
             className={({ isActive }) =>
               isActive
                 ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`

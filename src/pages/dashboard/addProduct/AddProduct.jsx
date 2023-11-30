@@ -1,21 +1,57 @@
+import Swal from "sweetalert2";
 import useAuth from "../../../hooks/useAuth";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 const AddProduct = () => {
   const { user } = useAuth();
+  const axiosSecure = useAxiosSecure();
 
   const handleAddProduct = (e) => {
     e.preventDefault();
 
-    // const reviewerName = e.target.name.value;
-    // const reviewerImage = e.target.image.value;
-    // const review = e.target.review.value;
-    // const rating = e.target.rating.value;
+    const productName = e.target.name.value;
+    const productImage = e.target.image.value;
+    const productDescription = e.target.description.value;
+    const tag = e.target.tag.value;
+    const link = e.target.link.value;
+    
 
-    // console.log(reviewerName, reviewerImage, review, rating);
+    console.log( productName, productImage, productDescription, tag, link);
+
+
+    const product = {
+      product_owner: user?.displayName,
+      owner_image: user?.photoURL,
+      owner_email: user?.email,
+      name: productName,
+      image: productImage,
+      description: productDescription,
+      tag,
+      link,
+      vote: 0,
+      timestamp: "2023-12-16"
+    };
+
+    axiosSecure.post("/products", product).then((res) => {
+      console.log(res.data);
+      if (res.data.insertedId) {
+        Swal.fire({
+          icon: "success",
+          title: "Product Added Successfully !",
+          showClass: {
+            popup: "animate_animated animate_fadeInDown",
+          },
+          hideClass: {
+            popup: "animate_animated animate_fadeOutUp",
+          },
+        });
+      }
+    });
+    e.target.reset();
   };
 
   return (
-    <div className="container mx-auto my-6 lg:my-16">
+    <div className="container mx-auto my-6 lg:my-12">
       <h2 className="font-bold text-2xl lg:text-4xl text-black mb-6 lg:mb-16 text-center uppercase">
         ---| Add A Product |---
       </h2>
@@ -35,6 +71,7 @@ const AddProduct = () => {
               <input
                 type="text"
                 name="name"
+                required
                 placeholder="Type Your Product Name"
                 className="input input-bordered input-info w-full"
               />
@@ -48,6 +85,7 @@ const AddProduct = () => {
               <input
                 type="text"
                 name="image"
+                required
                 placeholder="Give Your Product Image URL"
                 className="input input-bordered input-info w-full"
               />
