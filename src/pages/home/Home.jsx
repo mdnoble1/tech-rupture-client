@@ -4,6 +4,7 @@ import Footer from "../shared/Footer/Footer";
 import Navbar from "../shared/Navbar/Navbar";
 import Featured from "./featured/Featured";
 import Trending from "./trending/Trending";
+import Banner from "./banner/Banner";
 
 const Home = () => {
   const [products] = useProduct();
@@ -17,6 +18,7 @@ const Home = () => {
         <title>Tech Rupture | Home</title>
       </Helmet>
       <Navbar></Navbar>
+      <Banner></Banner>
       <Featured items={featured}></Featured>
       <Trending items={trending}></Trending>
       <Footer></Footer>
