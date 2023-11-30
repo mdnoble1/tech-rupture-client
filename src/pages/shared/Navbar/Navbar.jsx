@@ -58,7 +58,7 @@ const Navbar = () => {
     <nav className="bg-[#13a0fe] w-full px-8 lg:px-24 py-4 lg:py-6">
       <div className="flex justify-between items-center">
         {/* small screen dropdown  */}
-        <div className="dropdown lg:hidden">
+        <div className="dropdown lg:hidden z-10">
           <label tabIndex={0} className="text-3xl font-extrabold text-white">
             <HiMenuAlt1 />
           </label>
@@ -155,7 +155,7 @@ const Navbar = () => {
         </div>
         {/* large screen dropdown  */}
         <div className={`hidden lg:block`}>
-          <div className="dropdown dropdown-end">
+          <div className="dropdown dropdown-end z-10">
             {user ? (
               <label>
                 <img
