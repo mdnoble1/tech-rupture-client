@@ -1,17 +1,22 @@
 import { Helmet } from "react-helmet-async";
 import ProductCard from "../../components/ProductCard";
-import useProduct from "../../hooks/useProduct";
+// import useProduct from "../../hooks/useProduct";
 import Footer from "../shared/Footer/Footer";
 import Navbar from "../shared/Navbar/Navbar";
 import { useState } from "react";
 import ProductBanner from "./productBanner/ProductBanner";
+import useSearch from "../../hooks/useSearch";
 
 const Products = () => {
-  const [products] = useProduct();
+  // const [products] = useProduct();
   const [ search, setSearch ] = useState('');
 
-  // console.log(products);
-  console.log(search);
+  
+  // console.log(search);
+
+  const [ products ] = useSearch(search);
+
+  console.log(products);
 
   
   
@@ -51,7 +56,7 @@ const Products = () => {
         </div>
       </form>
       <div className="container mx-auto text-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 my-16">
-        {products.map((item) => (
+        {products?.map((item) => (
           <ProductCard key={item._id} item={item}></ProductCard>
         ))}
       </div>

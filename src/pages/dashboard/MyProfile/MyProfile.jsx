@@ -25,7 +25,7 @@ const MyProfile = () => {
           </h2>
           <p className="font-bold text-xl lg:text-2xl mb-4">Email : {email}</p>
           <p className="font-bold text-xl lg:text-2xl">
-            Status : <span className="text-[#13a0fe]">Verified</span>
+            Status : <span className="text-red-600">Pending</span>
           </p>
         </div>
         <div className="text-center">
