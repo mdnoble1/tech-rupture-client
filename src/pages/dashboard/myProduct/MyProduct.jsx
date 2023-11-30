@@ -3,7 +3,7 @@ import useMyProduct from "../../../hooks/useMyProduct";
 const MyProduct = () => {
   const [items] = useMyProduct();
 
-  console.log(items);
+  // console.log(items);
 
   return (
     <section className="mx-2 md:mx-10 lg:mx-32 mt-16">

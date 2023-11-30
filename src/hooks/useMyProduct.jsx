@@ -7,7 +7,7 @@ const useMyProduct = () => {
         const axiosSecure = useAxiosSecure();
         const { user } = useAuth();
 
-        console.log(user?.displayName)
+        // console.log(user?.displayName)
 
         
 

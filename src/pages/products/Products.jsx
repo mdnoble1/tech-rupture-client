@@ -15,7 +15,7 @@ const Products = () => {
 
   const [products] = useSearch(search);
 
-  console.log(products);
+  // console.log(products);
 
   const handleSearch = (e) => {
     e.preventDefault();

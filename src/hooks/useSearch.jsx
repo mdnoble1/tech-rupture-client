@@ -7,7 +7,7 @@ const useSearch = (search) => {
         const axiosSecure = useAxiosSecure();
         
 
-        console.log(search)
+        // console.log(search)
 
         
 
