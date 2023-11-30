@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 const AllUser = () => {
   const axiosSecure = useAxiosSecure();
@@ -14,6 +15,9 @@ const AllUser = () => {
 
   return (
     <section className="mx-2 md:mx-10 lg:mx-32 mt-16">
+      <Helmet>
+        <title>Dashboard | All User</title>
+      </Helmet>
       <div className="overflow-x-auto rounded-t-md lg:rounded-t-2xl border border-[#13a0fe]">
         <table className="table table-xs lg:table-lg">
           {/* head */}

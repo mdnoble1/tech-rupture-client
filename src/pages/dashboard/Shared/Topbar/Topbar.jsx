@@ -9,7 +9,7 @@ import { BsFillFileEarmarkBarGraphFill } from "react-icons/bs";
 import { RiCoupon2Fill } from "react-icons/ri";
 
 const Topbar = () => {
-  const isAdmin = true;
+  const isAdmin = false;
 
   return (
     <div className="navbar bg-[#13a0fe] p-4">
@@ -30,7 +30,7 @@ const Topbar = () => {
                     to="/"
                     className={({ isActive }) =>
                       isActive
-                        ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
+                        ? `text-[#13a0fe] flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                         : `text-black flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                     }
                   >
@@ -43,7 +43,7 @@ const Topbar = () => {
                     to="/dashboard/allUsers"
                     className={({ isActive }) =>
                       isActive
-                        ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
+                        ? `text-[#13a0fe] flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                         : `text-black flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                     }
                   >
@@ -55,7 +55,7 @@ const Topbar = () => {
                     to="/"
                     className={({ isActive }) =>
                       isActive
-                        ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
+                        ? `text-[#13a0fe] flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                         : `text-black flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                     }
                   >
@@ -71,7 +71,7 @@ const Topbar = () => {
                     to="/dashboard/profile"
                     className={({ isActive }) =>
                       isActive
-                        ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
+                        ? `text-[#13a0fe] flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                         : `text-black flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                     }
                   >
@@ -83,7 +83,7 @@ const Topbar = () => {
                     to="/dashboard/addProduct"
                     className={({ isActive }) =>
                       isActive
-                        ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
+                        ? `text-[#13a0fe] flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                         : `text-black flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                     }
                   >
@@ -95,7 +95,7 @@ const Topbar = () => {
                     to="/dashboard/myProduct"
                     className={({ isActive }) =>
                       isActive
-                        ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
+                        ? `text-[#13a0fe] flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                         : `text-black flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                     }
                   >

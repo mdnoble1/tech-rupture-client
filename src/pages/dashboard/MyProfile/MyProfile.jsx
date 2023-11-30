@@ -9,7 +9,7 @@ const MyProfile = () => {
   return (
     <section className="h-screen flex items-center justify-center">
       <Helmet>
-        <title>Tech Rupture | Dashboard-My Profile</title>
+        <title>Dashboard | My Profile</title>
       </Helmet>
       <div className="border border-[#13a0fe] rounded-xl">
         <div className="bg-[#13a0fe] rounded-t-xl px-16 md:px-24 lg:px-40 py-6 lg:py-10">

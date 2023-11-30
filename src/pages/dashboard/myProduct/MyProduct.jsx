@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import useMyProduct from "../../../hooks/useMyProduct";
 
 const MyProduct = () => {
@@ -7,6 +8,9 @@ const MyProduct = () => {
 
   return (
     <section className="mx-2 md:mx-10 lg:mx-32 mt-16">
+      <Helmet>
+        <title>Dashboard | My Product</title>
+      </Helmet>
       <div className="overflow-x-auto rounded-t-md lg:rounded-t-2xl border border-[#13a0fe]">
         <table className="table table-xs lg:table-lg">
           {/* head */}

@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import useAuth from "../../../hooks/useAuth";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 const AddProduct = () => {
   const { user } = useAuth();
@@ -52,6 +53,9 @@ const AddProduct = () => {
 
   return (
     <div className="container mx-auto my-6 lg:my-12">
+      <Helmet>
+        <title>Dashboard | Add Product</title>
+      </Helmet>
       <h2 className="font-bold text-2xl lg:text-4xl text-black mb-6 lg:mb-16 text-center uppercase">
         ---| Add A Product |---
       </h2>
