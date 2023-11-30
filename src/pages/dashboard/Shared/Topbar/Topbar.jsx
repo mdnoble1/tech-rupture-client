@@ -27,7 +27,7 @@ const Topbar = () => {
               <div>
                 <li className="mb-6">
                   <NavLink
-                    to="/dashboard/profile"
+                    to="/"
                     className={({ isActive }) =>
                       isActive
                         ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
@@ -40,7 +40,7 @@ const Topbar = () => {
                 </li>
                 <li className="mb-6">
                   <NavLink
-                    to="/dashboard/addProduct"
+                    to="/dashboard/allUsers"
                     className={({ isActive }) =>
                       isActive
                         ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
@@ -52,7 +52,7 @@ const Topbar = () => {
                 </li>
                 <li className="mb-10">
                   <NavLink
-                    to="/dashboard/myProduct"
+                    to="/"
                     className={({ isActive }) =>
                       isActive
                         ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`

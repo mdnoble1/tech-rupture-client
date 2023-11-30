@@ -11,6 +11,7 @@ import Dashboard from "../layouts/Dashboard";
 import MyProfile from "../pages/dashboard/MyProfile/MyProfile";
 import AddProduct from "../pages/dashboard/addProduct/AddProduct";
 import MyProduct from "../pages/dashboard/myProduct/MyProduct";
+import AllUser from "../pages/dashboard/AllUser/AllUser";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,13 @@ const router = createBrowserRouter([
         path: "myProduct",
         element: <MyProduct></MyProduct>
       },
+
+      // admin  
+
+      {
+        path: "allUsers",
+        element: <AllUser></AllUser>
+      }
     ]
   }
 ]);
