@@ -8,6 +8,7 @@ import useAuth from "../../hooks/useAuth";
 import { Helmet } from "react-helmet-async";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import Swal from "sweetalert2";
+import SocialLogin from "../shared/SocialLogin/SocialLogin";
 
 const Register = () => {
   const {
@@ -37,23 +38,21 @@ const Register = () => {
           const userInfo = {
             name: data.name,
             email: data.email,
-            
           };
-          axiosPublic.post('/users', userInfo)
-              .then(res => {
-                  if (res.data.insertedId) {
-                      // console.log('user added to the database')
-                      // reset();
-                      Swal.fire({
-                          position: 'center',
-                          icon: 'success',
-                          title: 'User Created Successfully.',
-                          showConfirmButton: false,
-                          timer: 1500
-                      });
-                      navigate('/');
-                  }
-              })
+          axiosPublic.post("/users", userInfo).then((res) => {
+            if (res.data.insertedId) {
+              // console.log('user added to the database')
+              // reset();
+              Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "User Created Successfully.",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              navigate("/");
+            }
+          });
         })
         .catch((error) => console.log(error));
     });
@@ -179,6 +178,7 @@ const Register = () => {
                 <span className="text-[#13a0fe]">Login</span>
               </Link>
             </p>
+            <SocialLogin></SocialLogin>
           </div>
         </div>
         <div className="bg-gradient-to-r from-[#022889] to-[#13a0fe] w-full py-20 lg:py-96 text-center text-white rounded-b-xl lg:rounded-3xl">

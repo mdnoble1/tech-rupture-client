@@ -1,4 +1,4 @@
-import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 import Swal from "sweetalert2";
 
@@ -6,9 +6,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import SocialLogin from "../shared/SocialLogin/SocialLogin";
 
 const Login = () => {
-  const { signInUser, signInWithGoogle } = useAuth();
+  const { signInUser } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -65,37 +66,37 @@ const Login = () => {
     event.target.reset();
   };
 
-  const handleLoginWithGoogle = () => {
-    signInWithGoogle()
-      .then(() => {
-        // console.log(result.user);
+  // const handleLoginWithGoogle = () => {
+  //   signInWithGoogle()
+  //     .then(() => {
+  //       // console.log(result.user);
 
-        //sweetalert
-        Swal.fire({
-          icon: "success",
-          title: "User Successfully Logged In !",
-          showClass: {
-            popup: "animate_animated animate_fadeInDown",
-          },
-          hideClass: {
-            popup: "animate_animated animate_fadeOutUp",
-          },
-        });
-        navigate("/");
-      })
-      .catch(() => {
-        Swal.fire({
-          icon: "error",
-          title: "User Credentials Doesn't Match !",
-          showClass: {
-            popup: "animate_animated animate_fadeInDown",
-          },
-          hideClass: {
-            popup: "animate_animated animate_fadeOutUp",
-          },
-        });
-      });
-  };
+  //       //sweetalert
+  //       Swal.fire({
+  //         icon: "success",
+  //         title: "User Successfully Logged In !",
+  //         showClass: {
+  //           popup: "animate_animated animate_fadeInDown",
+  //         },
+  //         hideClass: {
+  //           popup: "animate_animated animate_fadeOutUp",
+  //         },
+  //       });
+  //       navigate("/");
+  //     })
+  //     .catch(() => {
+  //       Swal.fire({
+  //         icon: "error",
+  //         title: "User Credentials Doesn't Match !",
+  //         showClass: {
+  //           popup: "animate_animated animate_fadeInDown",
+  //         },
+  //         hideClass: {
+  //           popup: "animate_animated animate_fadeOutUp",
+  //         },
+  //       });
+  //     });
+
   return (
     <section className="container mx-auto lg:mt-10">
       <Helmet>
@@ -165,13 +166,7 @@ const Login = () => {
                 <span className="text-[#13a0fe]">Register</span>
               </Link>
             </p>
-            <p className="font-medium text-lg">Or Sign In With</p>
-            <button
-              onClick={handleLoginWithGoogle}
-              className="btn btn-circle btn-outline mt-4 text-[#13a0fe]"
-            >
-              <FaGoogle className="text-2xl"></FaGoogle>
-            </button>
+            <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>
