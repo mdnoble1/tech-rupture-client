@@ -16,7 +16,7 @@ const ProductDetails = () => {
   // console.log(reviews);
 
   useEffect(() => {
-    fetch(`https://tech-rupture-server.vercel.app/products/${id}`)
+    fetch(`http://localhost:5000//products/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [id]);

@@ -43,6 +43,36 @@ const AllUser = () => {
     });
   };
 
+
+  //   make admin button
+
+  const handleMakeModerator = (user) => {
+    Swal.fire({
+      title: "Are You Sure?",
+      text: `You Want To Make ${user.name} a Moderator?`,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Make Moderator!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosSecure.patch(`/users/moderator/${user._id}`).then((res) => {
+          // console.log(res.data);
+          if (res.data.modifiedCount > 0) {
+            refetch();
+
+            Swal.fire({
+              title: "Successful!",
+              text: `${user.name} is Now a Moderator!`,
+              icon: "success",
+            });
+          }
+        });
+      }
+    });
+  };
+
   return (
     <section className="mx-2 md:mx-10 lg:mx-32 mt-16">
       <Helmet>
@@ -65,13 +95,20 @@ const AllUser = () => {
                 <th>{user.name}</th>
                 <td>{user.email}</td>
                 <td>
-                  <button className="btn btn-outline text-semibold text-[#13a0fe] btn-xs lg:btn-md">
+
+                {user.role === "admin" ? (
+                    <p className="font-bold text-lg text-green-700">Moderator</p>
+                  ) : (
+
+                  <button 
+                  onClick={() => handleMakeModerator(user)}
+                  className="btn btn-outline text-semibold text-[#13a0fe] btn-xs lg:btn-md">
                     Moderator
-                  </button>
+                  </button>)}
                 </td>
                 <td>
                   {user.role === "admin" ? (
-                    <p className="font-bold text-lg">Admin</p>
+                    <p className="font-bold text-lg text-green-700">Admin</p>
                   ) : (
                     <button
                       onClick={() => handleMakeAdmin(user)}
