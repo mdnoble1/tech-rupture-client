@@ -77,7 +77,6 @@ const AllUser = () => {
       <Helmet>
         <title>Dashboard | All User</title>
       </Helmet>
-
       <h2 className="font-bold text-2xl lg:text-4xl text-black mb-6 text-center uppercase">
         ---| Manage All Users |---
       </h2>
@@ -86,7 +85,6 @@ const AllUser = () => {
           TOTAL USERS : {users.length}
         </h2>
       </div>
-
       <div className="overflow-x-auto rounded-t-md lg:rounded-t-2xl border border-[#13a0fe]">
         <table className="table table-xs lg:table-lg">
           {/* head */}
