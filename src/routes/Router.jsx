@@ -8,10 +8,10 @@ import Products from "../pages/products/Products";
 import ProductDetails from "../pages/products/productDetails/ProductDetails";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../layouts/Dashboard";
-import MyProfile from "../pages/dashboard/MyProfile/MyProfile";
-import AddProduct from "../pages/dashboard/addProduct/AddProduct";
-import MyProduct from "../pages/dashboard/myProduct/MyProduct";
-import AllUser from "../pages/dashboard/AllUser/AllUser";
+import MyProfile from "../pages/dashboard/NormalUser/MyProfile/MyProfile";
+import AddProduct from "../pages/dashboard/NormalUser/addProduct/AddProduct";
+import MyProduct from "../pages/dashboard/NormalUser/myProduct/MyProduct";
+import AllUser from "../pages/dashboard/Admin/AllUser/AllUser";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +45,8 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children: [
+
+      // normal user routes 
       {
         path: "profile",
         element: <MyProfile></MyProfile>
@@ -58,8 +60,7 @@ const router = createBrowserRouter([
         element: <MyProduct></MyProduct>
       },
 
-      // admin  
-
+      // admin routes 
       {
         path: "allUsers",
         element: <AllUser></AllUser>

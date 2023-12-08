@@ -8,7 +8,7 @@ import { BsFillFileEarmarkBarGraphFill } from "react-icons/bs";
 import { RiCoupon2Fill } from "react-icons/ri";
 
 const Sidebar = () => {
-  const isAdmin = false;
+  const isAdmin = true;
 
   return (
     <div className="md:w-52 lg:w-96 bg-[#13a0fe] flex justify-center h-[1000px] min-h-full">

@@ -9,7 +9,7 @@ import { BsFillFileEarmarkBarGraphFill } from "react-icons/bs";
 import { RiCoupon2Fill } from "react-icons/ri";
 
 const Topbar = () => {
-  const isAdmin = false;
+  const isAdmin = true;
 
   return (
     <div className="navbar bg-[#13a0fe] p-4">

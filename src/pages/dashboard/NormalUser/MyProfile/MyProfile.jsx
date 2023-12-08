@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import useAuth from "../../../hooks/useAuth";
+import useAuth from "../../../../hooks/useAuth";
 
 const MyProfile = () => {
   const { user } = useAuth();
