@@ -4,19 +4,19 @@ import { ImBoxAdd } from "react-icons/im";
 import { RiCoupon2Fill, RiFileList3Fill } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 
-const SidebarNavigation = () => {
+const TopbarNavigation = () => {
   const isAdmin = true;
 
   return (
     <div>
-      { isAdmin ? (
+      {isAdmin ? (
         <div>
           <li className="mb-6">
             <NavLink
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
+                  ? `text-[#13a0fe] flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                   : `text-black flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
               }
             >
@@ -29,7 +29,7 @@ const SidebarNavigation = () => {
               to="/dashboard/allUsers"
               className={({ isActive }) =>
                 isActive
-                  ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
+                  ? `text-[#13a0fe] flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                   : `text-black flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
               }
             >
@@ -41,7 +41,7 @@ const SidebarNavigation = () => {
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
+                  ? `text-[#13a0fe] flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                   : `text-black flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
               }
             >
@@ -57,7 +57,7 @@ const SidebarNavigation = () => {
               to="/dashboard/profile"
               className={({ isActive }) =>
                 isActive
-                  ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
+                  ? `text-[#13a0fe] flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                   : `text-black flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
               }
             >
@@ -69,7 +69,7 @@ const SidebarNavigation = () => {
               to="/dashboard/addProduct"
               className={({ isActive }) =>
                 isActive
-                  ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
+                  ? `text-[#13a0fe] flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                   : `text-black flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
               }
             >
@@ -81,7 +81,7 @@ const SidebarNavigation = () => {
               to="/dashboard/myProduct"
               className={({ isActive }) =>
                 isActive
-                  ? `text-white flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
+                  ? `text-[#13a0fe] flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
                   : `text-black flex items-center gap-3 font-bold cinzel text-xs lg:text-xl uppercase`
               }
             >
@@ -95,4 +95,4 @@ const SidebarNavigation = () => {
   );
 };
 
-export default SidebarNavigation;
+export default TopbarNavigation;
