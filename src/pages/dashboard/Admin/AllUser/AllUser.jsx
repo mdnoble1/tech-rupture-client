@@ -43,7 +43,6 @@ const AllUser = () => {
     });
   };
 
-
   //   make admin button
 
   const handleMakeModerator = (user) => {
@@ -78,33 +77,47 @@ const AllUser = () => {
       <Helmet>
         <title>Dashboard | All User</title>
       </Helmet>
+
+      <h2 className="font-bold text-2xl lg:text-4xl text-black mb-6 text-center uppercase">
+        ---| Manage All Users |---
+      </h2>
+      <div className="mt-12 mb-4">
+        <h2 className="font-bold text-xl lg:text-3xl ">
+          TOTAL USERS : {users.length}
+        </h2>
+      </div>
+
       <div className="overflow-x-auto rounded-t-md lg:rounded-t-2xl border border-[#13a0fe]">
         <table className="table table-xs lg:table-lg">
           {/* head */}
           <thead className="bg-[#13a0fe]">
             <tr className="font-bold lg:text-2xl text-white text-center">
+              <th></th>
               <th>User Name</th>
               <th>User Email</th>
               <th>Make Moderator</th>
               <th>Make Admin</th>
             </tr>
           </thead>
-          {users?.map((user) => (
+          {users?.map((user, index) => (
             <tbody key={user._id}>
               <tr className="font-semibold lg:text-xl text-black text-center">
+                <th>{index + 1}</th>
                 <th>{user.name}</th>
                 <td>{user.email}</td>
                 <td>
-
-                {user.role === "admin" ? (
-                    <p className="font-bold text-lg text-green-700">Moderator</p>
+                  {user.role === "moderator" ? (
+                    <p className="font-bold text-lg text-green-700">
+                      Moderator
+                    </p>
                   ) : (
-
-                  <button 
-                  onClick={() => handleMakeModerator(user)}
-                  className="btn btn-outline text-semibold text-[#13a0fe] btn-xs lg:btn-md">
-                    Moderator
-                  </button>)}
+                    <button
+                      onClick={() => handleMakeModerator(user)}
+                      className="btn btn-outline text-semibold text-[#13a0fe] btn-xs lg:btn-md"
+                    >
+                      Moderator
+                    </button>
+                  )}
                 </td>
                 <td>
                   {user.role === "admin" ? (
