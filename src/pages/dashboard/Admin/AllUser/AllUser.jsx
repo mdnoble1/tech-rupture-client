@@ -1,17 +1,47 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import { Helmet } from "react-helmet-async";
+import Swal from "sweetalert2";
 
 const AllUser = () => {
   const axiosSecure = useAxiosSecure();
 
-  const { data: users = [] } = useQuery({
+  const { data: users = [], refetch } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
       const res = await axiosSecure.get("/users");
       return res.data;
     },
   });
+
+  //   make admin button
+
+  const handleMakeAdmin = (user) => {
+    Swal.fire({
+      title: "Are You Sure?",
+      text: `You Want To Make ${user.name} an Admin?`,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Make Admin!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosSecure.patch(`/users/admin/${user._id}`).then((res) => {
+          // console.log(res.data);
+          if (res.data.modifiedCount > 0) {
+            refetch();
+
+            Swal.fire({
+              title: "Successful!",
+              text: `${user.name} is Now an Admin!`,
+              icon: "success",
+            });
+          }
+        });
+      }
+    });
+  };
 
   return (
     <section className="mx-2 md:mx-10 lg:mx-32 mt-16">
@@ -40,9 +70,16 @@ const AllUser = () => {
                   </button>
                 </td>
                 <td>
-                  <button className="btn btn-outline text-semibold text-red-700 btn-xs lg:btn-md">
-                    Admin
-                  </button>
+                  {user.role === "admin" ? (
+                    <p className="font-bold text-lg">Admin</p>
+                  ) : (
+                    <button
+                      onClick={() => handleMakeAdmin(user)}
+                      className="btn btn-outline text-semibold text-red-700 btn-xs lg:btn-md"
+                    >
+                      Admin
+                    </button>
+                  )}
                 </td>
               </tr>
             </tbody>
