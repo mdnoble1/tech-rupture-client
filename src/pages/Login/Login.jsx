@@ -108,6 +108,14 @@ const Login = () => {
             <h2 className="font-bold text-5xl mb-4">Tech Rupture</h2>
           </Link>
           <h2 className="font-semibold text-4xl">Login </h2>
+          <div className="font-semibold text-lg mt-10 text-center">
+            <p>Admin Email : admin@ahmed.com</p>
+            <p>Admin Password : 123456Aa$</p>
+          </div>
+          <div className="font-semibold text-lg mt-6 text-center">
+            <p>Moderator Email : moderator@mia.com</p>
+            <p>Moderator Password : 123456Aa$</p>
+          </div>
         </div>
         <div className="w-11/12 lg:w-full bg-slate-100 rounded-lg drop-shadow-2xl mx-auto">
           <form
